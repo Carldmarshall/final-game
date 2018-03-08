@@ -1,0 +1,12 @@
+1. Html pages
+2. template htmlpage for all pages
+3. start page
+4. gamepage
+5. rules
+6. hiscore
+7. template needs to have navbar, footer, main.
+8. startpage has other games, welcome, button to play, image of the game
+9. player page, choose player, register player with name, type. Cancel imstead of start in the navbar, start button
+10. gamepage, has navbar cancel, and the game, and an alert or something that only appears when you win, or when the coins are all out.
+11. Rules page, with all the rules, and images of examples
+12. hiscore with players, and the winner with least coins used first
