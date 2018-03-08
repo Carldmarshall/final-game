@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+}
+
+
+#fyrairad {
+   background-image:url(../imgs/bg-game.jpg);
+    /*background-color: gray;*/
+    display: inline-block;
+ }  
+
+
+ .col {
+     width: 60px;
+     height: 60px;
+     display: inline-block;
+     background-color: white;
+     border-radius: 50%;
+     margin: 5px;
+    
+
+ }
+ .next-red {
+    background-image:url(../imgs/smiley.png);
+    opacity: 0.7;
+    
+    
+    /*background-color: rgba(178, 34, 34, 0.404);*/
+ }
+
+ .next-black {
+     background-color: rgba(122, 121, 121, 0.562);
+ }
+
+ .col.red {
+     background-image:url(../imgs/smiley.png);
+     /*background-color: red;*/
+ }
+ .col.black {
+     background-color: black;
+ }
