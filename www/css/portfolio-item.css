@@ -13,3 +13,9 @@ body {
     padding-top: 56px;
   }
 }
+footer {
+	background-color: #666a;
+	padding: 20px;
+	position: fixed;
+  	bottom: 0;
+ 	width: 100%;
