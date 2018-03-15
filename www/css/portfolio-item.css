@@ -27,3 +27,15 @@ footer {
     background: linear-gradient(to left,#7b4397,#dc2430);
 }
 }
+.games_pictures{	
+	border-radius: 20px;	
+}
+
+#main_picture{
+	width: 70%;
+	border-radius: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
