@@ -23,7 +23,6 @@ footer {
 	min-height: calc(100vh - 70px);
 	}
 
-
 .gradient {
 	background: #7b4397;
     background: -webkit-linear-gradient(to left,#7b4397,#136569);
@@ -35,10 +34,15 @@ footer {
 	border-radius: 20px;	
 }
 
+<<<<<<< HEAD
 .rules_pictures{
 	
 	height: auto;
     border-radius: 20px;
+=======
+#main_picture{
+	width: 70%;
+>>>>>>> master
 }
 
 
@@ -51,8 +55,11 @@ footer {
 }
 
 
-=======
-=======
+.button_style{
+    background-color: #136569;
+    border-color: #136569;
+}
 
->>>>>>> Stashed changes
-
+.change_color:hover {
+	background: #7b4397;
+}
