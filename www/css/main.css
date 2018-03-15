@@ -4,7 +4,7 @@ body {
 
 
 #fyrairad {
-   background-image:url(../imgs/bg-game.jpg);
+   background-image:url(../imgs/bg-game2.png);
     /*background-color: gray;*/
     display: inline-block;
  }  
@@ -14,7 +14,7 @@ body {
      width: 60px;
      height: 60px;
      display: inline-block;
-     background-color: rgba(255, 255, 255, 0.151);
+     background-color: rgba(255, 255, 255, 0);
      /*border-radius: 50%;*/
      margin: 5px;
     
