@@ -11,9 +11,10 @@ class FyraiRad {
 
 
 
-//skapar ett rutnät
+    //skapar ett rutnät
     createGrid() {
         const $board = $(this.selector);
+        
         for (let row = 0; row < this.ROWS; row++){
             const $row = $('<div>')
             .addClass('row');
@@ -27,49 +28,39 @@ class FyraiRad {
 
             }  
             $board.append($row);
-        
         }
     }
-        setupEventListners() {
-            const $board = $(this.selector);
 
-            function findLastEmptyCell(col) {
-                const cells = $(`.col[data-col='${col}']`)
-                for (let i = cells.length - 1; i >= 0; i--){
-                    const $cell = $(cells[i]);
-                    if ($cell.hasClass('empty')) {
-                        return $cell;
-                    }
+    setupEventListners() {
+        const $board = $(this.selector);
+
+        function findLastEmptyCell(col) {
+            const cells = $(`.col[data-col='${col}']`)
+            for (let i = cells.length - 1; i >= 0; i--){
+                const $cell = $(cells[i]);
+                if ($cell.hasClass('empty')) {
+                    return $cell;
                 }
-                
-                return null;
-                console.log(cells);
-            }   
+            }
+            return null;
+            console.log(cells);
+        }
 
-                $board.on('mouseenter', '.col.empty', function(){
-                const col = $(this).data('col');
-                const $lastEmptyCell = findLastEmptyCell(col);
-                $lastEmptyCell.addClass('next-red');
-            
-           
-                });
+        $board.on('mouseenter', '.col.empty', function(){
+            const col = $(this).data('col');
+            const $lastEmptyCell = findLastEmptyCell(col);
+            $lastEmptyCell.addClass('next-red'); 
+        });
 
-    $board.on('mouseleave', '.col', function(){
-    $('.col').removeClass(`next-red`);
-                 
-    });
+        $board.on('mouseleave', '.col', function(){
+            $('.col').removeClass(`next-red`);
+        });
 
                 $board.on('click', '.col.empty', function(){
-                const col = $(this).data('col');
-                const $lastEmptyCell = findLastEmptyCell(col);
-                $lastEmptyCell.removeClass('empty');
-                $lastEmptyCell.addClass('red');
-                
+                    const col = $(this).data('col');
+                    const $lastEmptyCell = findLastEmptyCell(col);
+                    $lastEmptyCell.removeClass('empty');
+                    $lastEmptyCell.addClass('red');
                 });
-
-    
-        
-
-        }
-            
+    }      
 }
