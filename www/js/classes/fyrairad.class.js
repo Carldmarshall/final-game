@@ -14,16 +14,16 @@ class FyraiRad {
     //skapar ett rutnät
     createGrid() {
         const $board = $(this.selector);
-        
+
         for (let row = 0; row < this.ROWS; row++){
             const $row = $('<div>')
             .addClass('row');
             for (let col = 0; col < this.COLS; col++){
                 const $col = $('<div>')
-                    .addClass('col empty')
-                    //Använder .attr för att lätt kunna ge id till de olika cellerna.
-                    .attr('data-col', col)
-                    .attr('data-row', row);
+                .addClass('col empty')
+                //Använder .attr för att lätt kunna ge id till de olika cellerna.
+                .attr('data-col', col)
+                .attr('data-row', row);
                 $row.append($col);
 
             }  
@@ -46,10 +46,13 @@ class FyraiRad {
             console.log(cells);
         }
 
-        $board.on('mouseenter', '.col.empty', function(){
-            const col = $(this).data('col');
+        function markNext(col){
             const $lastEmptyCell = findLastEmptyCell(col);
             $lastEmptyCell.addClass('next-red'); 
+        }
+
+        $board.on('mouseenter', '.col.empty', function(){
+            markNext($(this).data('col'));
         });
 
         $board.on('mouseleave', '.col', function(){
@@ -59,8 +62,9 @@ class FyraiRad {
                 $board.on('click', '.col.empty', function(){
                     const col = $(this).data('col');
                     const $lastEmptyCell = findLastEmptyCell(col);
-                    $lastEmptyCell.removeClass('empty');
+                    $lastEmptyCell.removeClass('empty next-red');
                     $lastEmptyCell.addClass('red');
+                    markNext(col);
                 });
     }      
 }
