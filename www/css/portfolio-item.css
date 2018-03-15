@@ -77,3 +77,7 @@ footer {
 .change_color:hover {
 	background: #7b4397;
 }
+
+.vs {
+	text-align: center;
+}
