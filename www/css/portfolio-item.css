@@ -68,16 +68,10 @@ footer {
 	border-color: #984398;
 	}
 	to {background-color: #187c81;
-	border-color: #187c81;}
-	from {background-color: #187c81;
-	border-color: #187c81;
-	}
-	to {background-color: #984398;
-	border-color: #984398;}
+		border-color: #187c81;}
 }
 
-.change_color:hover {
-	
+.change_color:hover {	
 	transform:scale(1.1,1.1);
 }
 
@@ -90,10 +84,6 @@ footer {
 	border-radius: 20px;
 	padding-bottom: 10px;
 }
-h3 {
-	color: white;
-}
-
-h1 {
+h3, h1 {
 	color: white;
 }
