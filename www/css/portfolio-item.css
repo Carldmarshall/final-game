@@ -52,6 +52,6 @@ footer {
     border-color: #136569;
 }
 
-button:hover {
-	background:#7b4397;
+.change_color:hover {
+	background: #7b4397;
 }
