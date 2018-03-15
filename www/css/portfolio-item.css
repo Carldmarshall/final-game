@@ -64,9 +64,10 @@ footer {
 }
 
 @-webkit-keyframes mymove {
-	from {background-color: #984398;
-	border-color: #984398;
-	}
+	from {
+		background-color: #984398;
+		border-color: #984398;
+		}
 	to {background-color: #187c81;
 		border-color: #187c81;}
 }
