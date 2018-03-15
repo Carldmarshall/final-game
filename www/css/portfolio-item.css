@@ -14,12 +14,14 @@ body {
   }
 }
 footer {
-	background-color: #666a;
 	padding: 20px;
-	position: fixed;
+	position: relative;
   	bottom: 0;
  	width: 100%;
  }
+ .all-except-footer {
+	min-height: calc(100vh - 70px);
+	}
 
 .gradient {
 	background: #7b4397;
