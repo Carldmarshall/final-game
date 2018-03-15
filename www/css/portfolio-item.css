@@ -57,13 +57,28 @@ footer {
 	padding: 0;
 }
 
+
 .button_style{
-    background-color: #136569;
-    border-color: #136569;
+    font-weight: bold;
+    -webkit-animation: mymove 4s infinite;
+}
+
+@-webkit-keyframes mymove {
+	from {background-color: #984398;
+	border-color: #984398;
+	}
+	to {background-color: #187c81;
+	border-color: #187c81;}
+	from {background-color: #187c81;
+	border-color: #187c81;
+	}
+	to {background-color: #984398;
+	border-color: #984398;}
 }
 
 .change_color:hover {
-	background: #7b4397;
+	
+	transform:scale(1.1,1.1);
 }
 
 .vs {
@@ -74,4 +89,11 @@ footer {
 	width:500px;
 	border-radius: 20px;
 	padding-bottom: 10px;
+}
+h3 {
+	color: white;
+}
+
+h1 {
+	color: white;
 }
