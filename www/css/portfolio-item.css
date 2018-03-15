@@ -27,7 +27,7 @@ footer {
 	background: #7b4397;
     background: -webkit-linear-gradient(to left,#7b4397,#136569);
     background: linear-gradient(to left,#7b4397,#136569);
-    
+
 }
 
 
@@ -62,9 +62,9 @@ footer {
     text-align: center;
 }
 
-#fourrows {
+/*#fourrows {
 	background-color: purple;
-}
+}*/
 
 .bg-img {	
 	background-image: initial;
