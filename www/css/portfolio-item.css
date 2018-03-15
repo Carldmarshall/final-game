@@ -23,11 +23,13 @@ footer {
 	min-height: calc(100vh - 70px);
 	}
 
+<<<<<<< Updated upstream
 .gradient {
 	background: #7b4397;
     background: -webkit-linear-gradient(to left,#7b4397,#136569);
     background: linear-gradient(to left,#7b4397,#136569);
 }
+<<<<<<< Updated upstream
 
 .games_pictures{	
 	border-radius: 20px;	
@@ -41,3 +43,14 @@ footer {
 .text-center {
     text-align: center;
 }
+
+#fourrows {
+	background-color: purple;
+}
+
+
+=======
+=======
+
+>>>>>>> Stashed changes
+
