@@ -19,3 +19,23 @@ footer {
 	position: fixed;
   	bottom: 0;
  	width: 100%;
+ }
+
+.gradient {
+	background: #7b4397;
+    background: -webkit-linear-gradient(to left,#7b4397,#136569);
+    background: linear-gradient(to left,#7b4397,#136569);
+}
+
+.games_pictures{	
+	border-radius: 20px;	
+}
+
+#main_picture{
+	width: 70%;
+	border-radius: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
