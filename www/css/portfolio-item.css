@@ -23,7 +23,10 @@ footer {
 	min-height: calc(100vh - 70px);
 	}
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .gradient {
 	background: #7b4397;
     background: -webkit-linear-gradient(to left,#7b4397,#136569);
@@ -37,7 +40,6 @@ footer {
 
 #main_picture{
 	width: 70%;
-	border-radius: 20px;
 }
 
 .text-center {
@@ -49,8 +51,11 @@ footer {
 }
 
 
-=======
-=======
+.button_style{
+    background-color: #136569;
+    border-color: #136569;
+}
 
->>>>>>> Stashed changes
-
+button:hover {
+	background:#7b4397;
+}
