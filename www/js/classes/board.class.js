@@ -5,6 +5,7 @@ class GameBoard {
         this.selector = selector;
         this.createGrid();
         this.setupEventListners();
+    
         
     }
 
@@ -14,7 +15,7 @@ class GameBoard {
     //skapar ett rutnät
     createGrid() {
         const $board = $(this.selector);
-
+        this.color = 'red';
         for (let row = 0; row < this.ROWS; row++){
             const $row = $('<div>')
             .addClass('row');
@@ -34,6 +35,7 @@ class GameBoard {
 
     setupEventListners() {
         const $board = $(this.selector);
+        const that = this;
 
         function findLastEmptyCell(col) {
             const cells = $(`.col[data-col='${col}']`)
@@ -49,7 +51,7 @@ class GameBoard {
         function markNext(col){
             const $lastEmptyCell = findLastEmptyCell(col);
            if ($lastEmptyCell != null){
-                $lastEmptyCell.addClass('next-red'); 
+                $lastEmptyCell.addClass('next-' + that.color); 
             }
         }
 
@@ -58,14 +60,23 @@ class GameBoard {
         });
 
         $board.on('mouseleave', '.col', function(){
-            $('.col').removeClass(`next-red`);
+            $('.col').removeClass('next-' + that.color);
         });
 
         $board.on('click', '.col.empty', function(){
             const col = $(this).data('col');
             const $lastEmptyCell = findLastEmptyCell(col);
-            $lastEmptyCell.removeClass('empty next-red');
-            $lastEmptyCell.addClass('red');
+            $lastEmptyCell.removeClass('empty next-' + that.color);
+            if (that.color == "red"){///////////////////////
+                that.color = "black"////////////////////////
+
+            }
+            else {
+                that.color = "red";
+            }
+            //that.color = that.color == "red" ? "black" : "red";
+
+            $lastEmptyCell.addClass(that.color);
             markNext(col);
         });
 
