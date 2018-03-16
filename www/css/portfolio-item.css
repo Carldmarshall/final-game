@@ -49,6 +49,9 @@ footer {
 /* From here Highy score related changes */
 
 .tabletext
+{
+	
+}
 
 #fourrows {
 	background-color: purple;
@@ -74,6 +77,12 @@ table#center {
 	to {
 		color:orange;
 		border-color: #187c81;}
+}
+
+.highscore-button
+{
+	margin-left:auto; 
+    margin-right:auto;
 }
 
 /*Upto here Hiscore related changes*/
