@@ -1,4 +1,4 @@
-class FyraiRad {
+class GameBoard {
     constructor(selector) {
         this.ROWS = 6;
         this.COLS = 7;
@@ -31,6 +31,7 @@ class FyraiRad {
         }
     }
 
+
     setupEventListners() {
         const $board = $(this.selector);
 
@@ -41,14 +42,15 @@ class FyraiRad {
                 if ($cell.hasClass('empty')) {
                     return $cell;
                 }
+            
             }
-            return null;
-            console.log(cells);
         }
 
         function markNext(col){
             const $lastEmptyCell = findLastEmptyCell(col);
-            $lastEmptyCell.addClass('next-red'); 
+           if ($lastEmptyCell != null){
+                $lastEmptyCell.addClass('next-red'); 
+            }
         }
 
         $board.on('mouseenter', '.col.empty', function(){
@@ -59,12 +61,13 @@ class FyraiRad {
             $('.col').removeClass(`next-red`);
         });
 
-                $board.on('click', '.col.empty', function(){
-                    const col = $(this).data('col');
-                    const $lastEmptyCell = findLastEmptyCell(col);
-                    $lastEmptyCell.removeClass('empty next-red');
-                    $lastEmptyCell.addClass('red');
-                    markNext(col);
-                });
+        $board.on('click', '.col.empty', function(){
+            const col = $(this).data('col');
+            const $lastEmptyCell = findLastEmptyCell(col);
+            $lastEmptyCell.removeClass('empty next-red');
+            $lastEmptyCell.addClass('red');
+            markNext(col);
+        });
+
     }      
 }

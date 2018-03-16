@@ -1,4 +1,4 @@
 $(document).ready(function() {
-  const fyrairad = new FyraiRad('#fyrairad')
+  const gameboard = new GameBoard('#gameboard')
 });
 
