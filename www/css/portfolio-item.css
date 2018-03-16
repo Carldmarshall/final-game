@@ -110,6 +110,10 @@ table#center {
 	text-align: center;
 }
 
+.highscoreimg {
+	text-align: center;
+}
+
 .rules_pictures {
 	width:500px;
 	border-radius: 20px;
