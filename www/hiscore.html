@@ -56,13 +56,15 @@
     <div class="container all-except-footer">
 
       <!-- Portfolio Item Heading -->
-      <h1 class="my-4 text-white">Score Board</h1>
+      <h1 class="my-4 text-white text-center scoreboard">Score Board</h1>
 
-      <!-- Portfolio Item Row -->
+      <!-- Portfolio Item Row <div class="mx-auto" style="width: 200px;">
+  Centered element
+</div>-->
       <div class="row">
 
-        <div class="col-md-8 gradient games_pictures">
-          <table class="table table-bordered table-hover mt-3">
+        <div class="col-md-8 gradient games_pictures mx-auto" style="width: 200px;">
+          <table class="table table-bordered table-hover mt-3 ">
   <thead class="text-white text-lg">
     <tr>
       <th scope="col">#</th>
@@ -94,10 +96,22 @@
     </tr>
   </tbody>
 </table>
+ </div>
+
  
-</div>
+        
 
 </main>
+<div class="row">
+
+           <div class= "col-md-6">
+            <a class="nav-link" href="play.html"><button type="button" class=" highscore-button float-right btn btn-primary aktive btn-lg button_style">PLAY Again</button></a>
+            </div>
+          <div class= "col-md-6">
+            <a class="nav-link" href="index.html"><button type="button" class="highscore-button btn btn-primary aktive btn-lg button_style">Home</button></a>
+          </div> 
+</div> 
+
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">

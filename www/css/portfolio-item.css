@@ -30,10 +30,6 @@ footer {
     background: linear-gradient(to left,#7b4397,#136569);
 }
 
-
-
-
-
 .games_pictures{	
 	border-radius: 20px;	
 }
@@ -50,10 +46,36 @@ footer {
 .text-center {
     text-align: center;
 }
+/* From here Highy score */
 
 #fourrows {
 	background-color: purple;
 }
+
+table#center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+  .scoreboard{
+
+    text-shadow: 3px 2px green;
+
+    font-weight: bold;
+    -webkit-animation: turn 4s infinite;
+}
+
+@-webkit-keyframes turn {
+	from {
+		color: #984398;
+		border-color: #984398;
+		}
+	to {
+		color:orange;
+		border-color: #187c81;}
+}
+
+/*Upto here Hiscore related changes*/
+
 
 
 .navbar {
