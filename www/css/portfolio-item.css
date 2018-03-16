@@ -38,6 +38,11 @@ footer {
 	border-radius: 20px;	
 }
 
+
+.ruless_pictures{	
+	border-radius: 20px;	
+}
+
 #main_picture{
 	width: 70%;
 }
@@ -57,13 +62,23 @@ footer {
 	padding: 0;
 }
 
+
 .button_style{
-    background-color: #136569;
-    border-color: #136569;
+    font-weight: bold;
+    -webkit-animation: mymove 4s infinite;
 }
 
-.change_color:hover {
-	background: #7b4397;
+@-webkit-keyframes mymove {
+	from {
+		background-color: #984398;
+		border-color: #984398;
+		}
+	to {background-color: #187c81;
+		border-color: #187c81;}
+}
+
+.change_color:hover {	
+	transform:scale(1.1,1.1);
 }
 
 .vs {
@@ -74,4 +89,7 @@ footer {
 	width:500px;
 	border-radius: 20px;
 	padding-bottom: 10px;
+}
+h3, h1 {
+	color: white;
 }
