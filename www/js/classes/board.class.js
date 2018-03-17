@@ -36,7 +36,6 @@ class GameBoard {
     setupEventListners() {
         const $board = $(this.selector);
         const that = this;
-
         function findLastEmptyCell(col) {
             const cells = $(`.col[data-col='${col}']`)
             for (let i = cells.length - 1; i >= 0; i--){
@@ -54,6 +53,7 @@ class GameBoard {
                 $lastEmptyCell.addClass('next-' + that.color); 
             }
         }
+        
 
         $board.on('mouseenter', '.col.empty', function(){
             markNext($(this).data('col'));
