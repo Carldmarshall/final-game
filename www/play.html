@@ -16,6 +16,15 @@
     <!-- Custom styles for this template -->
     <link href="css/portfolio-item.css" rel="stylesheet">
 
+    <!-- JavaScript libraries -->
+    <script src="./jsonflex.js"></script>
+    <script src="./js/libs/jquery.js"></script>
+    <script src="./js/libs/popper.js"></script> 
+
+    <!-- Application specific JavaScript -->
+    <script src="./js/classes/player.js"></script>
+    <script src="./js/mainPlayer.js"></script>
+
   </head>
 
   <body>
@@ -71,13 +80,18 @@
         <div class="col-md-8">
           <div class="form-group">
             <label class="col-form-label col-form-label-lg" for="inputLarge">Player 1</label>
-            <input class="form-control form-control-lg" type="text" placeholder="Han Solo" id="input1">
+            <input class="form-control form-control-lg" type="text" placeholder="Han Solo" id="input1" maxlength="12">
           </div>
 
-          <div class="form-group">
+          <div id="player2" class="form-group">
             <label class="col-form-label col-form-label-lg" for="inputLarge">Player 2</label>
-            <input class="form-control form-control-lg" type="text" placeholder="Chewbacca" id="input2">
+            <input class="form-control form-control-lg" type="text" placeholder="Chewbacca" id="input2" maxlength="12">
           </div>
+
+          <div class= "col-md-12 text-center pt-md-3">
+            <a id = "buttonSave" class="nav-link" href="game.html"><button type="button" class="change_color btn btn-primary aktive btn-lg button_style">Save</button></a>
+          </div>
+
         </div>
 
         <div class="col-md-4">
