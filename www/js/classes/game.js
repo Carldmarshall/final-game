@@ -1,29 +1,34 @@
+// This class is a brain of the game and it s in charge of thought (logical) process.
 class Game {
 	constructor(place) {
 		
-		this.place = place; // string with div's id	
-		
+		this.place = place; // string with div's id	where the grid will be created		
 		this.player1;
 		this.player2; 
 		this.board;
 		let that = this;
 
-		// Load the data from players.json file
-		JSON._load('players.json').then(function(players) {  // subscription to the resulata of loading
+		// Get the information about the players (load the data from 
+		// players.json file):
+		JSON._load('players.json').then(function(players) {  // subscription to the resulata of loading from Json-file:
 			// when the data is download do this:
+			// 1.
 		   	that.player1 = players[0];
 		   	that.player2 = players[1];
-		  
-			// Cozdanije borda vkljucheno v podpisku, inache on budet postrojen ran'she chem 
-			//poluchenu dannyje ob igrokah (name, type och color) iz fajla json
+
+		    // 2. Give order to the class Board to creat a greed 
+			
 		   	that.board = new Board(that.place, that.player1.color, that.player2.color);
 
-		   	$('#namePlayer1').text(that.player1.name); //add the names on the game board
-		   	$('#namePlayer2').text(that.player2.name); //add the names on the game board
+		   	$('#namePlayer1').text(that.player1.name); //display the names on the game board
+		   	$('#namePlayer2').text(that.player2.name); //display the names on the game board
 
+		   	// 3. Class Game has subscrition on the function of class Board onPlayerMove():
 		   	that.board.onPlayerMove = function(row, col) {
+			    // As soon as class Board reports to the class Game that the player has just put a coin
+			    // check if there is a winner
 			    if (that.checkForWinner(row, col)){
-			    	that.board.setGameOver();
+			    	that.board.setGameOver(); // - order to Board to stop the game if there is a winner
 			    	let winner = that.board.color == that.player1.color? that.player2.name: that.player1.name;
 			    	alert(winner + " is a winner!");
 			    	return;
@@ -31,19 +36,17 @@ class Game {
 
 			    
 			}
-		   	//game-function
 
 		});
 
 	} //constructor
-
 
 	
 
 	checkForWinner(row, col) {
 		const that = this;
 
-		// Proverjaet kolichestvo fishek aktivnogo igroka v zadannom napravlenii
+		// Check the ammount of coins of the one color in the given direction:
 		function checkDirection(direction) {
 		  let total = 0;
 		  let i = row + direction.i;
@@ -51,7 +54,7 @@ class Game {
 		  let nextCellColor = that.board.getCellValue(i, j);
 
 		  while (i >= 0 &&
-		    i < that.board.ROWS && // ROW - eto kolichestvo rjadov = 6
+		    i < that.board.ROWS && // ROW = 6
 		    j >= 0 &&
 		    j < that.board.COLS && 
 		    nextCellColor === that.board.color) {
@@ -63,7 +66,7 @@ class Game {
 		  return total;
 		}
 
-		function checkWin(directionA, directionB) { //proverjajet est' li 4 v rjad v zadannyh napravlenijah
+		function checkWin(directionA, directionB) { //check if there is 4 or more coins of the same color in a row and return color of the winner
 		  const total = 1 +
 		    checkDirection(directionA) +
 		    checkDirection(directionB);
@@ -74,7 +77,7 @@ class Game {
 		  }
 		}
 
-		function checkDiagonalBLtoTR() {  // pokazyvaet v kakom napravlenii proizvodit' proverku
+		function checkDiagonalBLtoTR() {  // strait and the oposit directions from the given cell
 		  return checkWin({i: 1, j: -1}, {i: -1, j: 1});
 		}
 

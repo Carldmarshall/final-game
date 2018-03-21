@@ -1,11 +1,11 @@
+// Script for play.html. It saves the user's input (names, chois "human/bot") 
+// and send this information to the class Game (see game.js)
+
 $(start);
 
 let player1 = new Player("Player 1", "human", "black");
 let player2 = new Player("Player 2", "human", "red");
   
-// let name1 = "Player 1"
-// let name2 = "Player 2";
-// let type2 = "human";
 
 function start(){
 

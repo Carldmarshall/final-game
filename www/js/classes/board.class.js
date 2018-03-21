@@ -1,3 +1,6 @@
+// This is the old code which we used before creating the classes
+
+
 // class GameBoard {
 //     constructor(selector) {
 //         this.ROWS = 6;

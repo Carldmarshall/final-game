@@ -1,3 +1,9 @@
+// Board is a stupid class :), which cannot analyse anything.
+// It is in charge of desplaying the board to the users including creating a grid
+// It executes orders from 
+//    1) Users (t.ex. put the coin on the click - see setupEventListeners()),
+//    2) Game class (t.ex. creat a grid or stop the game),
+//    3) from class Bot (put the coin in this cell)
 class Board {
 	constructor(place, color1, color2) {
 	  	this.ROWS = 6;
@@ -7,9 +13,12 @@ class Board {
 	    this.color2= color2;    
 	    this.createGrid();
 	    this.setupEventListeners();
-	    this.onPlayerMove = function(row, col) {}; ////////////////////////////////////////////
+
+	    //Class board can inform another classes that player has put a coin on the board,
+	    // that is necessary for class Game, which check the winner and give the order 
+	    // to the bot that it is time to decide a cell to make a move:
+	    this.onPlayerMove = function(row, col) {}; // - so class Game has a subscription to this function (look at game.js)
 	    this.color = this.color1;  //current color
-	    //this.currentColor; // ustanavlivajetsa gejmom
 	    this.isGameOver = false;
 	}
 
@@ -73,15 +82,17 @@ class Board {
 	        that.color = that.color == that.color1 ? that.color2 : that.color1;
 	        $lastEmptyCell.addClass(that.color);
 	        markNext(col);
-	        that.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));///////////////////////////////////////////////////////////////
+	        that.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));
 	    });
 
   	}
-
-    getCellValue(i, j) {   // f-tsija, kotoraja nahodit i vozvraschaet div s zadannym rjadom i  i kolonkoj j
+  	// Board can return the css-class of the div (with row i and col j): "red", "black" or "empty"
+  	// This function is used by class Game when it's checking the winner
+  	// I think that this function will e necessary for the bot when it's chosing the cell for its move
+    getCellValue(i, j) {   
     	let $cell = $(`.col[data-row='${i}'][data-col='${j}']`);
     	
-    	// Esli takoj jachejki ne suschestvujet - vernut null
+    	
     	if (i < 0 || j < 0
     		|| i > this.ROWS-1 || j > this.COLS - 1) return null;
 
@@ -89,12 +100,9 @@ class Board {
     	return $cell.attr('class').split(' ')[1];
 	}
 
-	setGameOver(){
+	setGameOver(){      //- the Board stops the game, if the class Game orders.
 		this.isGameOver = true;
 	}
 
-	setColor(color){
-		//this.currentColor = color;
-	}
-
+	
 }
