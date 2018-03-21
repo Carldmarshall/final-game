@@ -41,3 +41,73 @@ body {
      background-image:url(../imgs/player260.png);
  }
  
+
+ /* TABLE RELATED STYLING CHANGES */
+  th, td 
+        {
+            
+            background: #7b4397; /* 48,49,50 same as .gradient class properties(in portfolio-item.css) */
+            background: -webkit-linear-gradient(to left,#7b4397,#136569);
+            background: linear-gradient(to left,#7b4397,#136569);
+
+            margin:auto;
+            border:solid 1px #099e2c;
+            padding:2px 4px;
+            font:15px Tahoma;
+            margin-top: -10px;
+            
+            color: white;
+            font-weight: bold;
+            width: 300px;
+            height: 40px;
+            text-align: center;
+            border-collapse: separate;
+            border-spacing: 10px;
+           
+        }
+
+
+      table  
+      {
+            
+            background: #7b4397; /* 48,49,50 same as .gradient class properties(in portfolio-item.css) */
+            background: -webkit-linear-gradient(to left,#7b4397,#136569);
+            background: linear-gradient(to left,#7b4397,#136569);
+
+            margin:auto;
+            border:solid 1px #099e2c;
+            padding:2px 4px;
+            margin-top: -10px;
+            width: 500px;
+            height: 50px;
+            border-collapse: separate;
+            border-spacing: 10px;
+            border-radius: 20px;
+
+        }
+
+
+        th 
+        {
+            border-style: solid 5px orange;
+            font-size: 35px;
+            font-weight:bold;
+            color: white;
+            text-align: center;
+            text-shadow: 3px 2px green;
+
+            font-weight: bold;
+           -webkit-animation: turn 4s infinite;
+
+         }
+
+             @-webkit-keyframes turn {
+            from {
+                color: #984398;
+                border-color: #984398;
+                }
+            to {
+                color:green;
+                border-color: #187c81;
+               }
+               }

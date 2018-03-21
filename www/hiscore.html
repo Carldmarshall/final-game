@@ -4,29 +4,37 @@
   <head>
 
     <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+
 
     <title>High Score Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- JavaScript libraries -->
+    <script src="./jsonflex.js"></script>
+    <script src="./js/libs/jquery.js"></script>
+    <script src="./js/libs/popper.js"></script> 
+    
 
     <!-- Custom styles for this template -->
+    <script type="text/javascript" src="hiscore.json"></script>
+   <script type="text/javascript" src="js/hiscore.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="css/portfolio-item.css" rel="stylesheet">
-
+     
   </head>
 
-  <body>
     <header>
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-inline-block">
       <div class="container">
           <a class="navbar-brand" href="index.html">
               <img src="/imgs/homebutton.png" width="90" height="40" class="d-inline-block align-top-left" alt="">
-              
-            </a>
+          </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,79 +67,24 @@
     </nav>
 
    </header>
+   <body>
 
-    <main class=" mt-3 ">
-      
-
-    <!-- Page Content -->
-    <div class="container all-except-footer">
-
-      <!-- Portfolio Item Heading -->
-      <div class="highscoreimg">
+<div class="highscoreimg">
           <img src="/imgs/highscore.png" width="350px" text-center> 
-        </div>
-      <!--<h1 class="my-4 text-white text-center scoreboard">Score Board</h1>-->
+        </div>    
+<div id="showData"></div>
+ <div class="col-md-12 text-center mt-3">
 
-      <!-- Portfolio Item Row <div class="mx-auto" style="width: 200px;">
-  Centered element
-</div>-->
-      <div class="row">
-
-        <div class="col-md-8 gradient games_pictures mx-auto" style="width: 200px;">
-          <table class="table table-bordered table-hover mt-3 ">
-  <thead class="text-white text-lg">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col"><large>Name</large></th>
-      <th scope="col">Score</th>
-    </tr>
-  </thead>
-  <tbody class="text-white" id="fourrows">
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Mark1</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Mark3</td>
-      <td>70</td>
-    <tr>
-      <th scope="row">4</th>
-      <td>Mark4</td>
-      <td>50</td>
-    </tr>
-
-    </tr>
-  </tbody>
-</table>
- </div>
-
- <div class="col-md-12 text-center">
-
-         
-            <a class="nav-link" href="play.html"><button type="button" class=" btn btn-primary aktive btn-lg button_style">PLAY</button></a>
+ <a class="nav-link" href="play.html"><button type="button" class=" btn btn-primary aktive btn-lg button_style">PLAY</button></a>
             
-         
 </div> 
         
+</body>
 
-</main>
-<!--<div class="text-center">
 
-           <div class= "col-md">
-            <a class="nav-link" href="play.html"><button type="button" class=" btn btn-primary aktive btn-lg button_style">PLAY</button></a>
-            </div>
-         
-</div> !-->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-dark mt-5">
       <div class="container">
         <p class="m-0 text-center text-white">Group 2:  AJ - Carl - Ekaterina - Gabriel - Jesper - Sandhya - Urban    / Copyright &copy; Connect4Space 2018</p>
       </div>
