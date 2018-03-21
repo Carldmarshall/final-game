@@ -5,12 +5,10 @@
 //    2) Game class (t.ex. creat a grid or stop the game),
 //    3) from class Bot (put the coin in this cell)
 class Board {
-	constructor(place, color1, color2) {
+	constructor(place) {
 	  	this.ROWS = 6;
 	    this.COLS = 7;
-	    this.place = place;	
-	    this.color1= color1;
-	    this.color2= color2;    
+	    this.place = place;	 
 	    this.createGrid();
 	    this.setupEventListeners();
 
@@ -18,7 +16,6 @@ class Board {
 	    // that is necessary for class Game, which check the winner and give the order 
 	    // to the bot that it is time to decide a cell to make a move:
 	    this.onPlayerMove = function(row, col) {}; // - so class Game has a subscription to this function (look at game.js)
-	    this.color = this.color1;  //current color
 	    this.isGameOver = false;
 	}
 
@@ -79,10 +76,11 @@ class Board {
 	        const col = $(this).data('col');
 	        const $lastEmptyCell = that.findLastEmptyCell(col);
 	        $lastEmptyCell.removeClass('empty next-' + that.color);       
-	        that.color = that.color == that.color1 ? that.color2 : that.color1;
-	        $lastEmptyCell.addClass(that.color);
-	        markNext(col);
+	        //that.color = that.color == that.color1 ? that.color2 : that.color1;
+	        $lastEmptyCell.addClass(that.color);	        
 	        that.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));
+	    	markNext(col);
+
 	    });
 
   	}
@@ -102,6 +100,10 @@ class Board {
 
 	setGameOver(){      //- the Board stops the game, if the class Game orders.
 		this.isGameOver = true;
+	}
+
+	setCurrentColor(color){
+		this.color = color;
 	}
 
 	

@@ -6,6 +6,7 @@ class Game {
 		this.player1;
 		this.player2; 
 		this.board;
+		this.currentColor;
 		let that = this;
 
 		// Get the information about the players (load the data from 
@@ -18,7 +19,10 @@ class Game {
 
 		    // 2. Give order to the class Board to creat a greed 
 			
-		   	that.board = new Board(that.place, that.player1.color, that.player2.color);
+		   	that.board = new Board(that.place);
+			that.currentColor = that.player1.color;
+
+		   	that.board.setCurrentColor(that.currentColor);
 
 		   	$('#namePlayer1').text(that.player1.name); //display the names on the game board
 		   	$('#namePlayer2').text(that.player2.name); //display the names on the game board
@@ -29,12 +33,12 @@ class Game {
 			    // check if there is a winner
 			    if (that.checkForWinner(row, col)){
 			    	that.board.setGameOver(); // - order to Board to stop the game if there is a winner
-			    	let winner = that.board.color == that.player1.color? that.player2.name: that.player1.name;
-			    	alert(winner + " is a winner!");
+			    	let winner = that.currentColor == that.player1.color ? that.player1.name: that.player2.name;
+			    	alert(winner + " has won!");
 			    	return;
 			    }
-
-			    
+			    that.currentColor = that.currentColor == that.player1.color? that.player2.color: that.player1.color;
+			    that.board.setCurrentColor(that.currentColor);
 			}
 
 		});
@@ -57,7 +61,7 @@ class Game {
 		    i < that.board.ROWS && // ROW = 6
 		    j >= 0 &&
 		    j < that.board.COLS && 
-		    nextCellColor === that.board.color) {
+		    nextCellColor === that.currentColor) {
 			    total++;
 			    i += direction.i;
 			    j += direction.j;
@@ -71,7 +75,7 @@ class Game {
 		    checkDirection(directionA) +
 		    checkDirection(directionB);
 		  if (total >= 4) {
-		    return that.board.color;
+		    return that.currentColor;
 		  } else {
 		    return null;
 		  }

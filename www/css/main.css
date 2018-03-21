@@ -34,11 +34,11 @@ body {
  }
 
  .col.red {
-     background-image:url(../imgs/player160.png);
+     background-image:url(../imgs/player260.png);
      /*background-color: red;*/
  }
  .col.black {
-     background-image:url(../imgs/player260.png);
+     background-image:url(../imgs/player160.png);
  }
  
 
