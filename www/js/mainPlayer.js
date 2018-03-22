@@ -28,18 +28,18 @@ function start(){
 
   $('#optionsRadios2').on('change', function(){
     player2 = new Bot("Mr.Robot", "bot", "red");
-  	$('#player2').hide();
+  	$('#player2').hide(200);
   });
- $('#optionsRadios3').on('change', function(){
+ $('#optionsRadios3').on('change', function(){ // for when we have a better bot
     player2 = new Bot("Mr.Data", "bot", "red");
-    $('#player2').hide();
+    $('#player2').hide(200);
   });
 
-  $('#optionsRadios4').on('change', function(){
+  $('#optionsRadios4').on('change', function(){ // for when we can let the bots play against each other
     player1 = new Bot("Mr.Robot", "bot", "blue");
     player2 = new Bot("Mr.Data", "bot", "red");
-    $('#player1').hide(500);
-    $('#player2').hide(500);
+    $('#player1').hide(200);
+    $('#player2').hide(250);
 
   });
 
