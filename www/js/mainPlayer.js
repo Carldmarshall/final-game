@@ -27,11 +27,17 @@ function start(){
 
   $('#optionsRadios2').on('change', function(){
     player2 = new Bot("Mr.Robot", "bot", "red");
-  	// player2.type = 'bot';
-  	// player2.name ='Mr. Robot';
   	$('#player2').hide();
+
+  $('#optionsRadios3').on('change', function(){
+    player2 = new Bot("Mr.Data", "bot", "red");
+    $('#player2').hide();
   });
 
+$('#optionsRadios4').on('change', function(){
+    player2 = new Bot("bothBots", "bot", "red");
+    $('#player1', '#player2').hide();
+  });
 
   $('#buttonSave').on('click', function(){
 
