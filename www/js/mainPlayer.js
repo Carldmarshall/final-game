@@ -22,23 +22,26 @@ function start(){
 
   $('#optionsRadios1').on('change', function(){
   	player2.type = 'human';
+    $('#player1').show();
   	$('#player2').show();
   });
 
   $('#optionsRadios2').on('change', function(){
     player2 = new Bot("Mr.Robot", "bot", "red");
   	$('#player2').hide();
+  });
+ $('#optionsRadios3').on('change', function(){
+    player2 = new Bot("Mr.Data", "bot", "red");
+    $('#player2').hide();
+  });
 
- // $('#optionsRadios3').on('change', function(){
- //   player2 = new Bot("Mr.Data", "bot", "red");
- //   $('#player2').hide();
- // });
+  $('#optionsRadios4').on('change', function(){
+    player1 = new Bot("Mr.Robot", "bot", "blue");
+    player2 = new Bot("Mr.Data", "bot", "red");
+    $('#player1').hide(500);
+    $('#player2').hide(500);
 
-//$('#optionsRadios4').on('change', function(){
- //   player1 = new Bot("Mr.Robot", "bot", "blue");
- //   player2 = new Bot("bothBots", "bot", "red");
- //   $('#player1', '#player2').hide();
- // });
+  });
 
   $('#buttonSave').on('click', function(){
 
