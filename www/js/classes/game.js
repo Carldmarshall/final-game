@@ -3,16 +3,19 @@ class Game {
 	constructor(place) {
 		
 		this.place = place; // string with div's id	where the grid will be created		
-		this.player1;
-		this.player2; 
-		this.board;
-		this.currentColor;
+		this.player1 = undefined;
+		this.player2 = undefined;
+		this.board = undefined;
+		this.currentColor = undefined;
 		let that = this;
 
+		// Makes the jsonflex Load work with Classes
+		JSON._classes(Player, Bot);
 		// Get the information about the players (load the data from 
 		// players.json file):
 		JSON._load('players.json').then(function(players) {  // subscription to the resulata of loading from Json-file:
 			// when the data is download do this:
+			
 			// 1.
 		   	that.player1 = players[0];
 		   	that.player2 = players[1];
@@ -40,11 +43,10 @@ class Game {
 			    that.currentColor = that.currentColor == that.player1.color? that.player2.color: that.player1.color;
 			    that.board.setCurrentColor(that.currentColor);
 			    let currentPlayer;
-                that.currentPlayer = that.currentColor == that.player1.color? that.player1: that.player2;
+                currentPlayer = that.currentColor == that.player1.color? that.player1: that.player2;
                 
-                if (that.currentPlayer.type == "bot"){
-                	that.currentPlayer.botMove();
-                	alert("working")
+                if (currentPlayer.type == "bot"){                	
+                	currentPlayer.botMove();
                 }
 			}
 

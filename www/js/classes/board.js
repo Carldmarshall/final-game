@@ -72,12 +72,13 @@ class Board {
 	    });
 
 	    $board.on('click', '.col.empty', function(){
+	    	if (game.isWaitingForBot) return;
 	    	if (that.isGameOver) return;
 	        const col = $(this).data('col');
 	        const $lastEmptyCell = that.findLastEmptyCell(col);
 	        $lastEmptyCell.removeClass('empty next-' + that.color);       
 	        //that.color = that.color == that.color1 ? that.color2 : that.color1;
-	        $lastEmptyCell.addClass(that.color);	        
+	        $lastEmptyCell.addClass(that.color);       
 	        that.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));
 	    	markNext(col);
 
