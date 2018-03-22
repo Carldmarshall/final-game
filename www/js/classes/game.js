@@ -43,7 +43,8 @@ class Game {
                 that.currentPlayer = that.currentColor == that.player1.color? that.player1: that.player2;
                 
                 if (that.currentPlayer.type == "bot"){
-                	that.player2.botMove();
+                	that.currentPlayer.botMove();
+                	alert("working")
                 }
 			}
 
