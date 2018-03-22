@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Player 1",
+    "type": "human",
+    "color": "black"
+  },
+  {
+    "name": "Mr. Robot",
+    "type": "bot",
+    "color": "red"
+  }
+]
