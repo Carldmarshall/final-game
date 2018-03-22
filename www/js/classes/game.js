@@ -45,14 +45,10 @@ class Game {
 			    let currentPlayer;
                 currentPlayer = that.currentColor == that.player1.color? that.player1: that.player2;
                 
-<<<<<<< Updated upstream
                 if (currentPlayer.type == "bot"){                	
                 	currentPlayer.botMove();
-=======
-                if (that.currentPlayer.type == "bot"){
-									that.currentPlayer.botMove(alert('working'));
->>>>>>> Stashed changes
-                }
+
+				}
 			}
 
 		});
