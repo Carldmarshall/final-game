@@ -8,7 +8,9 @@ class Board {
 	constructor(place) {
 	  	this.ROWS = 6;
 	    this.COLS = 7;
-	    this.place = place;	 
+	    this.place = place;
+	    this.isBot = false;
+
 	    this.createGrid();
 	    this.setupEventListeners();
 
@@ -48,23 +50,25 @@ class Board {
         }
     }
 
+	markNext(col){
+    	if (this.isBot) return;
+
+    	const $lastEmptyCell = this.findLastEmptyCell(col);
+    	if ($lastEmptyCell != null){
+            $lastEmptyCell.addClass('next-' + this.color); 
+        }
+    }
+
   	setupEventListeners() {
 
 	    const that = this;
-
-
-	    function markNext(col){
-	       const $lastEmptyCell = that.findLastEmptyCell(col);
-	       if ($lastEmptyCell != null){
-	            $lastEmptyCell.addClass('next-' + that.color); 
-	        }
-	    }
-
+	    
 	    const $board = $(this.place);
 
 	    $board.on('mouseenter', '.col.empty', function(){
+	    	if (that.isBot) return; // "disable" events if bot
 	    	if (that.isGameOver) return;
-	        markNext($(this).data('col'));
+	        that.markNext($(this).data('col'));
 	    });
 
 	    $board.on('mouseleave', '.col', function(){
@@ -72,19 +76,23 @@ class Board {
 	    });
 
 	    $board.on('click', '.col.empty', function(){
-	    	if (game.isWaitingForBot) return;
+	    	if (that.isBot) return; // "disable" events if bot
 	    	if (that.isGameOver) return;
+
 	        const col = $(this).data('col');
 	        const $lastEmptyCell = that.findLastEmptyCell(col);
-	        $lastEmptyCell.removeClass('empty next-' + that.color);       
-	        //that.color = that.color == that.color1 ? that.color2 : that.color1;
-	        $lastEmptyCell.addClass(that.color);       
-	        that.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));
-	    	markNext(col);
 
+	        $lastEmptyCell.removeClass('empty next-' + that.color);
+        	$lastEmptyCell.addClass(that.color);
+	        
+	        that.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));
+	    	that.markNext(col);
 	    });
 
   	}
+
+
+  	
   	// Board can return the css-class of the div (with row i and col j): "red", "black" or "empty"
   	// This function is used by class Game when it's checking the winner
   	// I think that this function will e necessary for the bot when it's chosing the cell for its move
@@ -103,9 +111,28 @@ class Board {
 		this.isGameOver = true;
 	}
 
-	setCurrentColor(color){
+	setCurrentColorAndType(color, type){
 		this.color = color;
+		this.isBot = type == "bot"; // true or false
 	}
 
-	
+	existsEmpty(col){
+		if (this.findLastEmptyCell(col)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	// This method is for the Bot, it puts a coin in the given column
+	put(col){
+		let $lastEmptyCell = this.findLastEmptyCell(col);
+	    if ($lastEmptyCell) {
+			$lastEmptyCell.removeClass('empty next-' + this.color);
+        	$lastEmptyCell.addClass(this.color);
+        	this.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));
+        	//this.markNext(col);
+	    }
+
+	}
 }

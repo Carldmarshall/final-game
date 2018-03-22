@@ -6,20 +6,15 @@ class Bot extends Player{
 		// console.log('my name is:', this.name)
 	}
 
-	botMove() {
-		game.isWaitingForBot = true;
+	botMove(board) {
 		setTimeout(function(){
 			do{
-				const randomNumber = Math.floor(Math.random() * (game.board.COLS-1));
-				let $botEmptyCell = game.board.findLastEmptyCell(randomNumber);
-	        	if ($botEmptyCell) {
-					game.isWaitingForBot = false;
-					$botEmptyCell.trigger('mouseleave');	
-					$botEmptyCell.trigger('click');
-	            	break;
-	            }
+				const randomNumber = Math.floor(Math.random() * (board.COLS-1));
+				if (board.existsEmpty(randomNumber)) {
+					board.put(randomNumber);
+					break;
+				}
 			}while(true)
 		}, 900);
 	} 
 }
-

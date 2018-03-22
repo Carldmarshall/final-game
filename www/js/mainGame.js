@@ -3,9 +3,9 @@
 
 
 //make a global variable named game
-let game;
+//let game;
 
 $(document).ready(function() {
-  game = new Game('#gameboard');
+	let game = new Game('#gameboard');
 });
 
