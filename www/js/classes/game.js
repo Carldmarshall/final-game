@@ -44,6 +44,7 @@ class Game {
                 
                 if (that.currentPlayer.type == "bot"){
                 	that.player2.botMove();
+                	alert("working")
                 }
 			}
 
