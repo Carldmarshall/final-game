@@ -20,7 +20,7 @@ class Game {
 		   	that.player1 = players[0];
 		   	that.player2 = players[1];
 
-		    // 2. Give order to the class Board to creat a greed 
+		    // 2. Give order to the class Board to create a greed 
 			
 		   	that.board = new Board(that.place);
 			that.currentColor = that.player1.color;
@@ -45,8 +45,13 @@ class Game {
 			    let currentPlayer;
                 currentPlayer = that.currentColor == that.player1.color? that.player1: that.player2;
                 
+<<<<<<< Updated upstream
                 if (currentPlayer.type == "bot"){                	
                 	currentPlayer.botMove();
+=======
+                if (that.currentPlayer.type == "bot"){
+									that.currentPlayer.botMove(alert('working'));
+>>>>>>> Stashed changes
                 }
 			}
 
