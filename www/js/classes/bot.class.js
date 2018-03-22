@@ -19,7 +19,7 @@ class Bot extends Player{
 	            	break;
 	            }
 			}while(true)
-		}, 2000);
+		}, 900);
 	} 
 }
 
