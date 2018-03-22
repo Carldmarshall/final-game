@@ -7,6 +7,6 @@ class Bot extends Player{
 	}
 
 	botMove() {
-		board.findLastEmptyCell(col) 
+	//	board.findLastEmptyCell(col) 
 	}
 }
