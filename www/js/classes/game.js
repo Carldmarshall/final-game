@@ -47,7 +47,8 @@ class Game {
                 
                 if (currentPlayer.type == "bot"){                	
                 	currentPlayer.botMove();
-                }
+
+				}
 			}
 
 		});
