@@ -36,9 +36,15 @@ class Game {
 			    	let winner = that.currentColor == that.player1.color ? that.player1.name: that.player2.name;
 			    	alert(winner + " has won!");
 			    	return;
-			    }
+			    } 
 			    that.currentColor = that.currentColor == that.player1.color? that.player2.color: that.player1.color;
 			    that.board.setCurrentColor(that.currentColor);
+			    let currentPlayer;
+                that.currentPlayer = that.currentColor == that.player1.color? that.player1: that.player2;
+                
+                if (that.currentPlayer.type == "bot"){
+                	that.player2.botMove();
+                }
 			}
 
 		});
