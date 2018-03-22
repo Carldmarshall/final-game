@@ -7,7 +7,6 @@ class Bot extends Player{
 	}
 
 	botMove() {
-<<<<<<< Updated upstream
 		game.isWaitingForBot = true;
 		setTimeout(function(){
 			do{
@@ -40,11 +39,6 @@ class Bot extends Player{
 	if(playerTurnChanged{
 	isDone = true;
 	})
-=======
-		board.findLastEmptyCell(col) 
-		console.log('yey');
-}
->>>>>>> Stashed changes
 }
 
 function simulateBotTURN
