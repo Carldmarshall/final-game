@@ -35,6 +35,7 @@ function start(){
   });
 
 $('#optionsRadios4').on('change', function(){
+    player1 = new Bot("Mr.Robot", "bot", "blue");
     player2 = new Bot("bothBots", "bot", "red");
     $('#player1', '#player2').hide();
   });
