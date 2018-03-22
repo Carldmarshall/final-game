@@ -14,8 +14,8 @@ class Bot extends Player{
 				let $botEmptyCell = game.board.findLastEmptyCell(randomNumber);
 	        	if ($botEmptyCell) {
 					game.isWaitingForBot = false;
+					$botEmptyCell.trigger('mouseleave');	
 					$botEmptyCell.trigger('click');
-					$botEmptyCell.trigger('mouseleave');
 	            	break;
 	            }
 			}while(true)
