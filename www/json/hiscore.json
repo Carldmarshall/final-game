@@ -21,8 +21,36 @@
   {
     "name": "Mr.Robot",
     "type": "bot",
+    "color": "blue",
+    "score": 14,
+    "⚙": "Bot"
+  },
+  {
+    "name": "Mr.Data",
+    "type": "bot",
+    "color": "red",
+    "score": 13,
+    "⚙": "Bot"
+  },
+  {
+    "name": "Mr.Robot",
+    "type": "bot",
     "color": "red",
     "score": 12,
+    "⚙": "Bot"
+  },
+  {
+    "name": "T1",
+    "type": "human",
+    "color": "black",
+    "score": 12,
+    "⚙": "Player"
+  },
+  {
+    "name": "Mr.Data",
+    "type": "bot",
+    "color": "red",
+    "score": 11,
     "⚙": "Bot"
   },
   {
@@ -31,34 +59,5 @@
     "color": "black",
     "score": 10,
     "⚙": "Player"
-  },
-  {
-    "name": "T1",
-    "type": "human",
-    "color": "black",
-    "score": 12,
-    "⚙": "Player"
-  },
-  {
-    "name": "T2",
-    "type": "human",
-    "color": "red",
-    "score": 8,
-    "⚙": "Player"
-  },
-  {
-    "name": "Mr.Robot",
-    "type": "bot",
-    "color": "red",
-    "score": 8,
-    "⚙": "Bot"
-  },
-  {
-    "name": "Mr.Robot",
-    "type": "bot",
-    "color": "red",
-    "score": 6,
-    "score": 8,
-    "⚙": "Bot"
   }
 ]
