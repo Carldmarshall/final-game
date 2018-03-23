@@ -19,6 +19,13 @@
     "name": "T1",
     "type": "human",
     "color": "black",
+    "score": 16,
+    "⚙": "Player"
+  },
+  {
+    "name": "T1",
+    "type": "human",
+    "color": "black",
     "score": 10,
     "⚙": "Player"
   },

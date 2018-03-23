@@ -15,9 +15,6 @@ body {
 
 }
 
-
-
-}
 footer {
 	padding: 20px;
 	position: relative;
@@ -135,8 +132,52 @@ table#center {
 @font-face {
 	font-family: 'MyWebFont';
 	src: url('fonts/alien1-webfont.woff2') format('woff2');
+	font-weight: normal;
   }
 
+
+h5 {
+	color: rgb(214, 68, 68);
+	font-family: 'MyWebFont', Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+h5:hover {
+	color: rgb(139, 50, 50);
+	font-family: 'MyWebFont', Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+h6 {
+	color: rgb(152, 201, 152);
+	font-family: 'MyWebFont', Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+h6:hover {
+	color: rgb(98, 126, 98);
+	font-family: 'MyWebFont', Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+h6:active {
+	color: rgb(68, 219, 230);
+	font-family: 'MyWebFont', Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	margin-top: auto;
+	margin-bottom: auto;
+}
 
 h3, h1 {
 
