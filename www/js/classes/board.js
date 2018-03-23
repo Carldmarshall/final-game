@@ -135,7 +135,9 @@ class Board {
 		if (this.isGameOver) return;
 		let $lastEmptyCell = this.findLastEmptyCell(col);
 	    if ($lastEmptyCell) {
-	    	this.$cellOfLastMove.removeClass('cell-highLight');
+	    	if (this.$cellOfLastMove){
+	    		this.$cellOfLastMove.removeClass('cell-highLight');
+	    	}
 			$lastEmptyCell.removeClass('empty next-' + this.color);
         	$lastEmptyCell.addClass(this.color);
         	this.$cellOfLastMove = $lastEmptyCell;
