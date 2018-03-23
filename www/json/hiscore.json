@@ -15,7 +15,7 @@
     "name": "T1",
     "type": "human",
     "color": "black",
-    "score": 16,
+    "score": 18,
     "⚙": "Player"
   },
   {
@@ -57,11 +57,8 @@
     "name": "Mr.Robot",
     "type": "bot",
     "color": "red",
-<<<<<<< Updated upstream
     "score": 6,
-=======
     "score": 8,
->>>>>>> Stashed changes
     "⚙": "Bot"
   }
 ]
