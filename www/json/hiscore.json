@@ -1,5 +1,17 @@
 [
   {
+    "name": "Dennis",
+    "score": "56"
+  },
+  {
+    "name": "Siv",
+    "score": "23"
+  },
+  {
+    "name": "Anneth",
+    "score": "20"
+  },
+  {
     "name": "T1",
     "type": "human",
     "color": "black",
@@ -40,5 +52,12 @@
     "color": "red",
     "score": 8,
     "⚙": "Bot"
+  },
+  {
+    "name": "Player 2",
+    "type": "human",
+    "color": "red",
+    "score": 3,
+    "⚙": "Player"
   }
 ]
