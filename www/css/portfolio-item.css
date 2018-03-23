@@ -132,9 +132,21 @@ table#center {
 	border-radius: 20px;
 	padding-bottom: 10px;
 }
+@font-face {
+	font-family: 'MyWebFont';
+	src: url('fonts/alien1-webfont.woff2') format('woff2');
+  }
+
+
 h3, h1 {
+
 	color: white;
-}
+    font-family: 'MyWebFont', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    }
+
+
 h3:hover 
 {	
 	font-weight: bold;
