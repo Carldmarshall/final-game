@@ -185,7 +185,7 @@ h6:hover {
 .active {
 	color: rgb(230, 206, 68);
 	font-family: 'MyWebFont', Arial, sans-serif;
-	font-size: 3vh;
+	/*font-size: 3vh;*/
 	font-weight: normal;
 	margin-top: auto;
 	margin-bottom: auto;
