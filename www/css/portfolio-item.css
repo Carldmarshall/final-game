@@ -12,8 +12,12 @@ body {
   body {
     padding-top: 56px;
   }
+
 }
 
+
+
+}
 footer {
 	padding: 20px;
 	position: relative;
@@ -61,7 +65,8 @@ table#center {
     margin-left:auto; 
     margin-right:auto;
   }
-  .scoreboard{
+
+ .scoreboard {
 
     text-shadow: 3px 2px green;
 
@@ -79,8 +84,7 @@ table#center {
 		border-color: #187c81;}
 }
 
-.highscore-button
-{
+.highscore-button {
 	margin-left:auto; 
     margin-right:auto;
 }
@@ -97,7 +101,7 @@ table#center {
 }
 
 
-.button_style{
+.button_style {
     font-weight: bold;
     -webkit-animation: mymove 4s infinite;
 }
@@ -130,4 +134,10 @@ table#center {
 }
 h3, h1 {
 	color: white;
+}
+h3:hover 
+{	
+	font-weight: bold;
+	color :purple;
+	transform:scale(1.1,1.1);
 }

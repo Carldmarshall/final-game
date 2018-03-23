@@ -36,27 +36,27 @@
 //     }
 
 
-//     setupEventListners() {
-//         const $board = $(this.selector);
-//         const that = this;
+    setupEventListners() {
+        const $board = $(this.selector);
+        const that = this;
 
-//         function findLastEmptyCell(col) {
-//             const cells = $(`.col[data-col='${col}']`)
-//             for (let i = cells.length - 1; i >= 0; i--){
-//                 const $cell = $(cells[i]);
-//                 if ($cell.hasClass('empty')) {
-//                     return $cell;
-//                 }
+        function findLastEmptyCell(col) {
+            const cells = $(`.col[data-col='${col}']`)
+            for (let i = cells.length - 1; i >= 0; i--){
+                const $cell = $(cells[i]);
+                if ($cell.hasClass('empty')) {
+                    return $cell;
+                }
             
 //             }
 //         }
 
-//         function markNext(col){
-//             const $lastEmptyCell = findLastEmptyCell(col);
-//            if ($lastEmptyCell != null){
-//                 $lastEmptyCell.addClass('next-' + that.color); 
-//             }
-//         }
+        function markNext(col){
+            const $lastEmptyCell = findLastEmptyCell(col);
+           if ($lastEmptyCell != null){
+                $lastEmptyCell.addClass('next-' + that.color); 
+            }
+        }
 
 //         $board.on('mouseenter', '.col.empty', function(){
 //             markNext($(this).data('col'));
