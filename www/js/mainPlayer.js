@@ -20,26 +20,29 @@ function start(){
   	player2.name = $('#input2').val();
   });
 
-  $('#optionsRadios1').on('change', function(){
+  $('#optionsRadios1').on('change', function(){ // human vs human
   	player2.type = 'human';
-    $('#player1').show();
-  	$('#player2').show();
+    $('#player1').show(200);
+  	$('#player2').show(200);
   });
 
-  $('#optionsRadios2').on('change', function(){
+  $('#optionsRadios2').on('change', function(){ // human vs bot - easy
     player2 = new Bot("Mr.Robot", "bot", "red");
+    $('#player1').show(200);    
   	$('#player2').hide(200);
   });
- $('#optionsRadios3').on('change', function(){ // for when we have a better bot
-    player2 = new Bot("Mr.Data", "bot", "red");
+  
+ $('#optionsRadios3').on('change', function(){ //human vs bot - hard
+    player2 = new Bot("Mr.Data", "bot", "red"); // for when we have a better bot
+    $('#player1').show(200);  
     $('#player2').hide(200);
   });
 
-  $('#optionsRadios4').on('change', function(){ // for when we can let the bots play against each other
+  $('#optionsRadios4').on('change', function(){ // bot vs bot -easy
     player1 = new Bot("Mr.Robot", "bot", "black");
     player2 = new Bot("Mr.Data", "bot", "red");
     $('#player1').hide(200);
-    $('#player2').hide(250);
+    $('#player2').hide(200);
 
   });
 
@@ -47,7 +50,6 @@ function start(){
 
   	let players = [player1, player2];
 	JSON._save('players.json', players);
-  console.log('yao')
 
   });
 

@@ -15,7 +15,7 @@
     "name": "T1",
     "type": "human",
     "color": "black",
-    "score": 16,
+    "score": 18,
     "⚙": "Player"
   },
   {
@@ -36,7 +36,7 @@
     "name": "T1",
     "type": "human",
     "color": "black",
-    "score": 9,
+    "score": 12,
     "⚙": "Player"
   },
   {
@@ -58,6 +58,7 @@
     "type": "bot",
     "color": "red",
     "score": 6,
+    "score": 8,
     "⚙": "Bot"
   }
 ]
