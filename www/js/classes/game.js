@@ -44,7 +44,7 @@ class Game {
 			    	// todo: sort it by asc score
 			    	// todo: splice so we only keep first 4 (or more?)
 			    	// then save.
-			    	let highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
+			    	highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
 			    	highScoreList = highScoreList.slice(0,10);
 			    	JSON._save("hiscore.json", highScoreList);
 			    	alert(winner + " has won!");

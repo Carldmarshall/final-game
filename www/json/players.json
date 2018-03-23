@@ -1,13 +1,14 @@
 [
   {
-    "name": "Player 1",
+    "name": "T1",
     "type": "human",
     "color": "black",
+    "score": 0,
     "⚙": "Player"
   },
   {
-    "name": "Mr.Robot",
-    "type": "bot",
+    "name": "t2",
+    "type": "human",
     "color": "red",
     "score": 0,
     "⚙": "Player"
