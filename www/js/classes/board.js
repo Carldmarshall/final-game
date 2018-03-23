@@ -132,6 +132,7 @@ class Board {
 
 	// This method is for the Bot, it puts a coin in the given column
 	put(col){
+		if (this.isGameOver) return;
 		let $lastEmptyCell = this.findLastEmptyCell(col);
 	    if ($lastEmptyCell) {
 	    	this.$cellOfLastMove.removeClass('cell-highLight');
