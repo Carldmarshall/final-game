@@ -1,3 +1,4 @@
+
 $(document).ready(function ()
  {
         $.getJSON("json/hiscore.json", function (data) {
@@ -43,6 +44,7 @@ $(document).ready(function ()
 
             }
               
+            arrItems = arrItems.slice(0,4);
             // ADD JSON DATA TO THE TABLE AS ROWS.
             for (let i = 0; i < arrItems.length; i++) {
 
@@ -60,10 +62,17 @@ $(document).ready(function ()
             }
 
             // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-            let divContainer = document.getElementById("showData");
-            divContainer.innerHTML = "";
-            divContainer.appendChild(table);
+            //let divContainer = document.getElementById("showData");
+            //divContainer.innerHTML = "";
+            //divContainer.appendChild(table);
+    
+             
 
+            $('#showData').html(table)
+
+            
+
+          
         });
     });
 

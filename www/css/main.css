@@ -138,24 +138,15 @@ body {
         th 
         {
             border-style: solid 5px orange;
-            font-size: 35px;
+            font-size: 25px;
             font-weight:bold;
             color: white;
             text-align: center;
             text-shadow: 3px 2px green;
 
             font-weight: bold;
-           -webkit-animation: turn 4s infinite;
+          
 
          }
 
-             @-webkit-keyframes turn {
-            from {
-                color: #984398;
-                border-color: #984398;
-                }
-            to {
-                color:green;
-                border-color: #187c81;
-               }
-               }
+            
