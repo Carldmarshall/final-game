@@ -200,9 +200,4 @@ h3, h1 {
     }
 
 
-h3:hover 
-{	
-	font-weight: bold;
-	color :purple;
-	transform:scale(1.1,1.1);
-}
+
