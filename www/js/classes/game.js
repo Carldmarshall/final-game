@@ -39,7 +39,7 @@ class Game {
 			    if (that.checkForWinner(row, col)){
 			    	that.board.setGameOver(); // - order to Board to stop the game if there is a winner
 
-			    	setTimeout(function(){
+			    	setTimeout(async function(){
 				    	let winner = that.currentPlayer.name;
 				    	let highScoreList = await JSON._load('hiscore.json');
 				    	highScoreList.push(that.currentPlayer);
