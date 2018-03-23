@@ -13,6 +13,7 @@ class Board {
 	    this.$cellOfLastMove;
 	    this.createGrid();
 	    this.setupEventListeners();
+	    
 
 	    //Class board can inform another classes that player has put a coin on the board,
 	    // that is necessary for class Game, which check the winner and give the order 
@@ -143,5 +144,7 @@ class Board {
 	    }
 
 	}
+
+	
 }
 

@@ -30,6 +30,7 @@ class Game {
 		   	that.board.setCurrentColorAndType(that.player1.color, that.player1.type);
 
 		   	$('#namePlayer1').text(that.player1.name); //display the names on the game board
+		   	$('#namePlayer1').addClass('p1'); //// set the High-light on the current player on the board
 		   	$('#namePlayer2').text(that.player2.name); //display the names on the game board
 
 		   	// 3. Class Game has subscrition on the function of class Board onPlayerMove():
@@ -48,7 +49,7 @@ class Game {
 				    	// then save.
 				    	highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
 				    	highScoreList = highScoreList.slice(0,10);
-				    	JSON._save("hiscore.json", highScoreList.currentPlayer.name + highScoreList.currentPlayer.score);
+				    	JSON._save("hiscore.json", highScoreList);
 				    	alert(winner + " has won!");
 			    	}, 200);
 			    } 
@@ -64,6 +65,19 @@ class Game {
 
 
 			    that.board.setCurrentColorAndType(that.currentColor, that.currentPlayer.type);
+
+
+			    // Change the high-light of the current player on the board
+			    if($('#namePlayer1').hasClass('p1')){
+			    	$('#namePlayer1').removeClass('p1');
+			    	$('#namePlayer2').addClass('p2');
+			    } 
+
+			    else if($('#namePlayer2').hasClass('p2')){
+			    	$('#namePlayer2').removeClass('p2');
+			    	$('#namePlayer1').addClass('p1');
+			    }
+
 			    
                 if (that.currentPlayer.type == "bot"){                	
                 	that.currentPlayer.botMove(that.board);
