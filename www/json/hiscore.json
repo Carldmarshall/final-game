@@ -1,28 +1,53 @@
 [
-    {
-        
-        "Name": "Thomas",
-        
-        "Score": "80"
-    },
-    {
-        
-        "Name": "Dennis",
-       
-        "Score": "56"
-    },
-    {
-        
-        "Name": "Anneth",
-        
-        "Score": "20"
-    },
-    
-
-     {
-        
-        "Name": "Siv",
-        
-        "Score": "23"
-    }
+  {
+    "Name": "Thomas",
+    "score": "80"
+  },
+  {
+    "Name": "Dennis",
+    "score": "56"
+  },
+  {
+    "Name": "Siv",
+    "score": "23"
+  },
+  {
+    "Name": "Anneth",
+    "score": "20"
+  },
+  {
+    "name": "T1",
+    "type": "human",
+    "color": "black",
+    "score": 10,
+    "⚙": "Player"
+  },
+  {
+    "name": "T1",
+    "type": "human",
+    "color": "black",
+    "score": 9,
+    "⚙": "Player"
+  },
+  {
+    "name": "T2",
+    "type": "human",
+    "color": "red",
+    "score": 8,
+    "⚙": "Player"
+  },
+  {
+    "name": "tt",
+    "type": "human",
+    "color": "red",
+    "score": 7,
+    "⚙": "Player"
+  },
+  {
+    "name": "T2",
+    "type": "human",
+    "color": "red",
+    "score": 3,
+    "⚙": "Player"
+  }
 ]

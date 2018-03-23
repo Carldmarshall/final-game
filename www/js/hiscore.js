@@ -5,11 +5,11 @@ $(document).ready(function ()
 
             let arrItems = [];      // THE ARRAY TO STORE JSON ITEMS.
 
-           data = data.sort(function(a,b){return b.Score - a.Score}); //SCORE IN DECENDING ORDER
+           data = data.sort(function(a,b){return b.score - a.score}); //SCORE IN DECENDING ORDER
 
             $.each(data, function (index, value) {
                 arrItems.push(value);       // PUSH THE VALUES INSIDE THE ARRAY.
-  });
+            });
 
             // EXTRACT VALUE FOR TABLE HEADER.
             let col = [];

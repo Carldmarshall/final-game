@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< Updated upstream
     "name": "Mr.Robot",
     "type": "bot",
     "color": "blue",
@@ -7,8 +8,19 @@
   },
   {
     "name": "Mr.Data",
+=======
+    "name": "T1",
+    "type": "human",
+    "color": "black",
+    "score": 0,
+    "⚙": "Player"
+  },
+  {
+    "name": "T2",
+>>>>>>> Stashed changes
     "type": "human",
     "color": "red",
-    "⚙": "Bot"
+    "score": 0,
+    "⚙": "Player"
   }
 ]

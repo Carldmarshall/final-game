@@ -25,6 +25,7 @@ class Game {
 			
 		   	that.board = new Board(that.place);
 			that.currentColor = that.player1.color;
+			that.currentPlayer = that.player1;
 
 		   	that.board.setCurrentColorAndType(that.player1.color, that.player1.type);
 
@@ -32,18 +33,34 @@ class Game {
 		   	$('#namePlayer2').text(that.player2.name); //display the names on the game board
 
 		   	// 3. Class Game has subscrition on the function of class Board onPlayerMove():
-		   	that.board.onPlayerMove = function(row, col) {
+		   	that.board.onPlayerMove = async function(row, col) {
 			    // As soon as class Board reports to the class Game that the player has just put a coin
 			    // check if there is a winner
 			    if (that.checkForWinner(row, col)){
 			    	that.board.setGameOver(); // - order to Board to stop the game if there is a winner
 			    	let winner = that.currentPlayer.name;
+			    	let highScoreList = await JSON._load('hiscore.json');
+			    	highScoreList.push(that.currentPlayer);
+			    	// todo: sort it by asc score
+			    	// todo: splice so we only keep first 4 (or more?)
+			    	// then save.
+			    	let highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
+			    	highScoreList = highScoreList.slice(0,10);
+			    	JSON._save("hiscore.json", highScoreList);
 			    	alert(winner + " has won!");
 			    	return;
 			    } 
+
+                that.currentPlayer.score++;
+                $("#player1Score").text(that.player1.score);
+                $("#player2Score").text(that.player2.score);
+
+
+
 			    that.currentColor = that.currentColor == that.player1.color? that.player2.color: that.player1.color;
                 that.currentPlayer = that.currentColor == that.player1.color? that.player1: that.player2;
-                
+
+
 			    that.board.setCurrentColorAndType(that.currentColor, that.currentPlayer.type);
 			    
                 if (that.currentPlayer.type == "bot"){                	
