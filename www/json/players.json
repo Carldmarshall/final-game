@@ -1,14 +1,24 @@
 [
   {
-    "name": "Mr.Robot",
-    "type": "bot",
-    "color": "blue",
-    "⚙": "Bot"
+<<<<<<< Updated upstream
+    "name": "T1",
+=======
+    "name": "h",
+>>>>>>> Stashed changes
+    "type": "human",
+    "color": "black",
+    "score": 0,
+    "⚙": "Player"
   },
   {
-    "name": "Mr.Data",
+<<<<<<< Updated upstream
+    "name": "t2",
+=======
+    "name": "d",
+>>>>>>> Stashed changes
     "type": "human",
     "color": "red",
-    "⚙": "Bot"
+    "score": 0,
+    "⚙": "Player"
   }
 ]

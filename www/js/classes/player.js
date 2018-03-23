@@ -7,7 +7,8 @@ class Player {
 	constructor(name, type, color) {
 	  	this.name = name;
 	  	this.type = type;
-	  	this.color = color;	  	
+	  	this.color = color;
+	  	this.score = 0;  	
 	}
    
 }

@@ -3,8 +3,9 @@ body {
 }
 
 
+
 #gameboard {
-    padding-top: 20px;
+    /*padding-top: 20px;*/
     /*background-image:url(../imgs/bg-game2.png);*/
     /*background-color: gray;*/
     display: inline-block;
@@ -134,6 +135,7 @@ body {
             border-collapse: separate;
             border-spacing: 10px;
             border-radius: 20px;
+            max-width: 100%;
 
         }
 
