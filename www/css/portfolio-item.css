@@ -25,7 +25,7 @@ footer {
  	width: 100%;
  }
  .all-except-footer {
-	min-height: calc(100vh - 70px);
+	min-height: calc(100vh - 170px);
 	}
 
 .gradient {
