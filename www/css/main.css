@@ -17,9 +17,12 @@ body {
      height: 60px;
      display: inline-block;
      background-color: rgba(216, 216, 216, 0.205);
-     margin: 5.7px;
-    
+     margin: 5.7px;    
 
+ }
+
+ .cell-highLight{
+  background-color: rgba(216, 216, 216, 0.505);
  }
 
  .vs {

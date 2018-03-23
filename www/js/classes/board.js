@@ -10,7 +10,7 @@ class Board {
 	    this.COLS = 7;
 	    this.place = place;
 	    this.isBot = false;
-
+	    this.$cellOfLastMove;
 	    this.createGrid();
 	    this.setupEventListeners();
 
@@ -72,19 +72,24 @@ class Board {
 	    });
 
 	    $board.on('mouseleave', '.col', function(){
+	    	$('.col').removeClass('cell-highLight');
 	        $('.col').removeClass('next-' + that.color);
 	    });
 
 	    $board.on('click', '.col.empty', function(){
 	    	if (that.isBot) return; // "disable" events if bot
 	    	if (that.isGameOver) return;
+	    	if (that.$cellOfLastMove){
+	    		that.$cellOfLastMove.removeClass('cell-highLight');
+	    	}
 
 	        const col = $(this).data('col');
 	        const $lastEmptyCell = that.findLastEmptyCell(col);
 
 	        $lastEmptyCell.removeClass('empty next-' + that.color);
         	$lastEmptyCell.addClass(that.color);
-	        
+        	that.$cellOfLastMove = $lastEmptyCell;
+	        that.$cellOfLastMove.addClass('cell-highLight');
 	        that.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));
 	    	that.markNext(col);
 	    });
@@ -128,8 +133,11 @@ class Board {
 	put(col){
 		let $lastEmptyCell = this.findLastEmptyCell(col);
 	    if ($lastEmptyCell) {
+	    	this.$cellOfLastMove.removeClass('cell-highLight');
 			$lastEmptyCell.removeClass('empty next-' + this.color);
         	$lastEmptyCell.addClass(this.color);
+        	this.$cellOfLastMove = $lastEmptyCell;
+        	this.$cellOfLastMove.addClass('cell-highLight');
         	this.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));
         	//this.markNext(col);
 	    }

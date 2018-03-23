@@ -133,7 +133,6 @@ class Game {
 		  checkDiagonalTLtoBR();
 	} //checkForWinner
 
-
-
+	
 }//class
 
