@@ -38,17 +38,19 @@ class Game {
 			    // check if there is a winner
 			    if (that.checkForWinner(row, col)){
 			    	that.board.setGameOver(); // - order to Board to stop the game if there is a winner
-			    	let winner = that.currentPlayer.name;
-			    	let highScoreList = await JSON._load('hiscore.json');
-			    	highScoreList.push(that.currentPlayer);
-			    	// todo: sort it by asc score
-			    	// todo: splice so we only keep first 4 (or more?)
-			    	// then save.
-			    	highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
-			    	highScoreList = highScoreList.slice(0,10);
-			    	JSON._save("hiscore.json", highScoreList.currentPlayer.name + highScoreList.currentPlayer.score);
-			    	alert(winner + " has won!");
-			    	return;
+
+			    	setTimeout(function(){
+				    	let winner = that.currentPlayer.name;
+				    	let highScoreList = await JSON._load('hiscore.json');
+				    	highScoreList.push(that.currentPlayer);
+				    	// todo: sort it by asc score
+				    	// todo: splice so we only keep first 4 (or more?)
+				    	// then save.
+				    	highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
+				    	highScoreList = highScoreList.slice(0,10);
+				    	JSON._save("hiscore.json", highScoreList.currentPlayer.name + highScoreList.currentPlayer.score);
+				    	alert(winner + " has won!");
+			    	}, 200);
 			    } 
 
                 that.currentPlayer.score++;
