@@ -35,6 +35,7 @@
   {
     "name": "Mr.Robot",
     "type": "bot",
+<<<<<<< Updated upstream
     "color": "black",
     "score": 15,
     "⚙": "Bot"
@@ -59,5 +60,38 @@
     "color": "red",
     "score": 13,
     "⚙": "Bot"
+=======
+    "color": "red",
+    "score": 14,
+    "⚙": "Bot"
+  },
+  {
+    "name": "Mr.Data",
+    "type": "bot",
+    "color": "red",
+    "score": 13,
+    "⚙": "Bot"
+  },
+  {
+    "name": "Mr.Data",
+    "type": "bot",
+    "color": "red",
+    "score": 13,
+    "⚙": "Bot"
+  },
+  {
+    "name": "Mr.Data",
+    "type": "bot",
+    "color": "red",
+    "score": 13,
+    "⚙": "Bot"
+  },
+  {
+    "name": "Ratbads",
+    "type": "human",
+    "color": "black",
+    "score": 12,
+    "⚙": "Player"
+>>>>>>> Stashed changes
   }
 ]

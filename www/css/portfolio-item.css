@@ -44,6 +44,13 @@ footer {
 	width: 70%;
 }
 
+#main_picture1{
+	width: 100%;
+	text-align: center;
+	border: #7b4397;
+	border: solid;
+}
+
 .text-center {
     text-align: center;
 }
