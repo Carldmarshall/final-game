@@ -1,16 +1,33 @@
 [
   {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "name": "T1",
+=======
+    "name": "h",
+>>>>>>> Stashed changes
+=======
+    "name": "Player 1",
+>>>>>>> Stashed changes
     "type": "human",
     "color": "black",
     "score": 0,
     "⚙": "Player"
   },
   {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "name": "t2",
+=======
+    "name": "d",
+>>>>>>> Stashed changes
     "type": "human",
+=======
+    "name": "Mr.Robot",
+    "type": "bot",
+>>>>>>> Stashed changes
     "color": "red",
     "score": 0,
-    "⚙": "Player"
+    "⚙": "Bot"
   }
 ]

@@ -11,20 +11,8 @@ $(document).ready(function ()
                 arrItems.push(value);       // PUSH THE VALUES INSIDE THE ARRAY.
             });
 
-            // EXTRACT VALUE FOR TABLE HEADER.
-            let col = [];
-            col.push("#");
-            for (let i = 0; i < arrItems.length; i++)
-             {
-                for (let key in arrItems[i]) 
-                {
-                    if (col.indexOf(key) === -1) 
-                    {
-                        col.push(key);
-
-                    }
-                }
-            }
+            // Make VALUEs FOR TABLE HEADER.
+            let col = ['#', 'Name', 'Score'];
 
             // CREATE DYNAMIC TABLE.
             let table = document.createElement("table");
@@ -53,12 +41,11 @@ $(document).ready(function ()
                    let tabCell1 = tr.insertCell(-1);
                    tabCell1.innerHTML = i+1; // to start the # in the table from 1
 
-                for (let j = 1; j < col.length; j++) {
-                    
-                    let tabCell = tr.insertCell(-1);
-                    
-                    tabCell.innerHTML = arrItems[i][col[j]];
-                }
+                   let tabCell2 = tr.insertCell(-1);
+                   tabCell2.innerHTML = arrItems[i].name;
+
+                   let tabCell3 = tr.insertCell(-1);
+                   tabCell3.innerHTML = arrItems[i].score;
             }
 
             // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.

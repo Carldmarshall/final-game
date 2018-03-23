@@ -1,18 +1,18 @@
 [
   {
-    "Name": "Thomas",
+    "name": "Thomas",
     "score": "80"
   },
   {
-    "Name": "Dennis",
+    "name": "Dennis",
     "score": "56"
   },
   {
-    "Name": "Siv",
+    "name": "Siv",
     "score": "23"
   },
   {
-    "Name": "Anneth",
+    "name": "Anneth",
     "score": "20"
   },
   {
@@ -21,6 +21,13 @@
     "color": "black",
     "score": 16,
     "⚙": "Player"
+  },
+  {
+    "name": "Mr.Robot",
+    "type": "bot",
+    "color": "red",
+    "score": 12,
+    "⚙": "Bot"
   },
   {
     "name": "T1",
@@ -44,17 +51,10 @@
     "⚙": "Player"
   },
   {
-    "name": "tt",
-    "type": "human",
+    "name": "Mr.Robot",
+    "type": "bot",
     "color": "red",
-    "score": 7,
-    "⚙": "Player"
-  },
-  {
-    "name": "T2",
-    "type": "human",
-    "color": "red",
-    "score": 3,
-    "⚙": "Player"
+    "score": 8,
+    "⚙": "Bot"
   }
 ]

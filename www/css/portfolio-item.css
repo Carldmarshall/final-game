@@ -22,7 +22,7 @@ footer {
  	width: 100%;
  }
  .all-except-footer {
-	min-height: calc(100vh - 70px);
+	min-height: calc(100vh - 170px);
 	}
 
 .gradient {
@@ -99,7 +99,8 @@ table#center {
 
 
 .button_style {
-    font-weight: bold;
+	font-family: 'MyWebFont', Arial, sans-serif;
+    font-weight: normal;
     -webkit-animation: mymove 4s infinite;
 }
 
@@ -135,27 +136,35 @@ table#center {
 	font-weight: normal;
   }
 
-
-h5 {
-	color: rgb(214, 68, 68);
+p1 {
 	font-family: 'MyWebFont', Arial, sans-serif;
-	font-size: 18px;
-	font-weight: normal;
-	margin-top: auto;
-	margin-bottom: auto;
+	color: rgb(97, 109, 214);
+	display: block;
 }
 
-h5:hover {
-	color: rgb(139, 50, 50);
+p2 {
 	font-family: 'MyWebFont', Arial, sans-serif;
-	font-size: 18px;
-	font-weight: normal;
-	margin-top: auto;
-	margin-bottom: auto;
+	color: rgb(184, 32, 32);
+	display: block;
 }
+
+.p1 {
+	font-family: 'MyWebFont', Arial, sans-serif;
+	color: rgb(97, 109, 214);
+	display: block;
+}
+
+.p2 {
+	font-family: 'MyWebFont', Arial, sans-serif;
+	color: rgb(184, 32, 32);
+	display: block;
+}
+
+
+
 
 h6 {
-	color: rgb(152, 201, 152);
+	color: rgb(180, 180, 180);
 	font-family: 'MyWebFont', Arial, sans-serif;
 	font-size: 18px;
 	font-weight: normal;
@@ -163,15 +172,15 @@ h6 {
 	margin-bottom: auto;
 }
 h6:hover {
-	color: rgb(98, 126, 98);
+	color: rgb(101, 206, 101);
 	font-family: 'MyWebFont', Arial, sans-serif;
 	font-size: 18px;
 	font-weight: normal;
 	margin-top: auto;
 	margin-bottom: auto;
 }
-h6:active {
-	color: rgb(68, 219, 230);
+.active {
+	color: rgb(230, 206, 68);
 	font-family: 'MyWebFont', Arial, sans-serif;
 	font-size: 18px;
 	font-weight: normal;
