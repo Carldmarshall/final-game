@@ -1,13 +1,21 @@
 [
   {
+<<<<<<< Updated upstream
     "name": "T1",
+=======
+    "name": "h",
+>>>>>>> Stashed changes
     "type": "human",
     "color": "black",
     "score": 0,
     "⚙": "Player"
   },
   {
+<<<<<<< Updated upstream
     "name": "t2",
+=======
+    "name": "d",
+>>>>>>> Stashed changes
     "type": "human",
     "color": "red",
     "score": 0,

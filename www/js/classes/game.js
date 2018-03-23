@@ -14,7 +14,7 @@ class Game {
 		JSON._classes(Player, Bot);
 		// Get the information about the players (load the data from 
 		// players.json file):
-		JSON._load('players.json').then(function(players) {  // subscription to the resulata of loading from Json-file:
+		JSON._load('hiscore.json').then(function(players) {  // subscription to the resulata of loading from Json-file:
 			// when the data is download do this:
 			
 			// 1.
@@ -46,7 +46,7 @@ class Game {
 			    	// then save.
 			    	highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
 			    	highScoreList = highScoreList.slice(0,10);
-			    	JSON._save("hiscore.json", highScoreList);
+			    	JSON._save("hiscore.json", highScoreList.currentPlayer.name + highScoreList.currentPlayer.score);
 			    	alert(winner + " has won!");
 			    	return;
 			    } 
