@@ -39,7 +39,7 @@ class Game {
 			    // check if there is a winner
 			    if (that.checkForWinner(row, col)){
 			    	that.board.setGameOver(); // - order to Board to stop the game if there is a winner
-
+			    	let winner = that.currentPlayer.name;
 			    	setTimeout(async function(){
 			    		if (that.currentPlayer == that.player1) {
 			    			that.currentPlayer = that.player2;
@@ -71,7 +71,6 @@ class Game {
 
 			    that.board.setCurrentColorAndType(that.currentColor, that.currentPlayer.type);
 
-
 			    // Change the high-light of the current player on the board
 			    if($('#namePlayer1').hasClass('p1')){
 			    	$('#namePlayer1').removeClass('p1');
@@ -82,7 +81,6 @@ class Game {
 			    	$('#namePlayer2').removeClass('p2');
 			    	$('#namePlayer1').addClass('p1');
 			    }
-
 			    
                 if (that.currentPlayer.type == "bot"){                	
                 	that.currentPlayer.botMove(that.board);
