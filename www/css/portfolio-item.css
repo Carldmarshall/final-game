@@ -148,6 +148,17 @@ p2 {
 	display: block;
 }
 
+.p1 {
+	font-family: 'MyWebFont', Arial, sans-serif;
+	color: rgb(97, 109, 214);
+	display: block;
+}
+
+.p2 {
+	font-family: 'MyWebFont', Arial, sans-serif;
+	color: rgb(184, 32, 32);
+	display: block;
+}
 
 
 
