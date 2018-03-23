@@ -1,21 +1,5 @@
 [
   {
-    "name": "Thomas",
-    "score": "80"
-  },
-  {
-    "name": "Dennis",
-    "score": "56"
-  },
-  {
-    "name": "Siv",
-    "score": "23"
-  },
-  {
-    "name": "Anneth",
-    "score": "20"
-  },
-  {
     "name": "T1",
     "type": "human",
     "color": "black",

@@ -168,7 +168,7 @@ p2 {
 h6 {
 	color: rgb(180, 180, 180);
 	font-family: 'MyWebFont', Arial, sans-serif;
-	font-size: 5vh;
+	font-size: 3vh;
 	vertical-align: auto;
 	font-weight: normal;
 	margin-top: auto;
@@ -177,7 +177,7 @@ h6 {
 h6:hover {
 	color: rgb(101, 206, 101);
 	font-family: 'MyWebFont', Arial, sans-serif;
-	font-size: 5vh;
+	font-size: 3vh;
 	font-weight: normal;
 	margin-top: auto;
 	margin-bottom: auto;
@@ -185,7 +185,7 @@ h6:hover {
 .active {
 	color: rgb(230, 206, 68);
 	font-family: 'MyWebFont', Arial, sans-serif;
-	font-size: 5vh;
+	font-size: 3vh;
 	font-weight: normal;
 	margin-top: auto;
 	margin-bottom: auto;
@@ -200,9 +200,4 @@ h3, h1 {
     }
 
 
-h3:hover 
-{	
-	font-weight: bold;
-	color :purple;
-	transform:scale(1.1,1.1);
-}
+
