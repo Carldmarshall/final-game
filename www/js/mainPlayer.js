@@ -31,7 +31,7 @@ function start(){
     $('#player1').show(200);    
   	$('#player2').hide(200);
   });
-  
+
  $('#optionsRadios3').on('change', function(){ //human vs bot - hard
     player2 = new Bot("Mr.Data", "bot", "red"); // for when we have a better bot
     $('#player1').show(200);  
@@ -39,7 +39,7 @@ function start(){
   });
 
   $('#optionsRadios4').on('change', function(){ // bot vs bot -easy
-    player1 = new Bot("Mr.Robot", "bot", "black");
+    player1 = new Bot("Mr.Robot", "bot", "black");// for when we can let the bots play against each other
     player2 = new Bot("Mr.Data", "bot", "red");
     $('#player1').hide(200);
     $('#player2').hide(200);
