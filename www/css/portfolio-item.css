@@ -99,7 +99,8 @@ table#center {
 
 
 .button_style {
-    font-weight: bold;
+	font-family: 'MyWebFont', Arial, sans-serif;
+    font-weight: normal;
     -webkit-animation: mymove 4s infinite;
 }
 
