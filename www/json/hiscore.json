@@ -23,6 +23,13 @@
     "⚙": "Player"
   },
   {
+    "name": "Mr.Robot",
+    "type": "bot",
+    "color": "red",
+    "score": 12,
+    "⚙": "Bot"
+  },
+  {
     "name": "T1",
     "type": "human",
     "color": "black",
@@ -44,17 +51,10 @@
     "⚙": "Player"
   },
   {
-    "name": "tt",
-    "type": "human",
+    "name": "Mr.Robot",
+    "type": "bot",
     "color": "red",
-    "score": 7,
-    "⚙": "Player"
-  },
-  {
-    "name": "T2",
-    "type": "human",
-    "color": "red",
-    "score": 3,
-    "⚙": "Player"
+    "score": 8,
+    "⚙": "Bot"
   }
 ]
