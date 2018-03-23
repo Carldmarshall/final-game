@@ -14,7 +14,7 @@ class Game {
 		JSON._classes(Player, Bot);
 		// Get the information about the players (load the data from 
 		// players.json file):
-		JSON._load('hiscore.json').then(function(players) {  // subscription to the resulata of loading from Json-file:
+		JSON._load('players.json').then(function(players) {  // subscription to the resulata of loading from Json-file:
 			// when the data is download do this:
 			
 			// 1.
