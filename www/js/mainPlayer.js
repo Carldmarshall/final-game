@@ -36,7 +36,7 @@ function start(){
   });
 
   $('#optionsRadios4').on('change', function(){ // for when we can let the bots play against each other
-    player1 = new Bot("Mr.Robot", "bot", "blue");
+    player1 = new Bot("Mr.Robot", "bot", "black");
     player2 = new Bot("Mr.Data", "bot", "red");
     $('#player1').hide(200);
     $('#player2').hide(250);
