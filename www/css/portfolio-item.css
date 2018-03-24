@@ -208,3 +208,24 @@ h3, h1 {
     font-style:normal;
 }
 
+.modal1 {
+	color: rgb(230, 206, 68);
+	font-family: 'MyWebFont', Arial, sans-serif;
+	border-color: rgb(230, 206, 68);
+	border-width: 5px;
+	border-radius: 50px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal2 {
+	color: rgb(230, 206, 68);
+	font-family: 'MyWebFont', Arial, sans-serif;
+	background-color:transparent;
+	border-color: transparent;
+}
+
+.modalx {
+	color: rgb(230, 206, 68);
+	font-family: Arial, sans-serif;
+}
+
