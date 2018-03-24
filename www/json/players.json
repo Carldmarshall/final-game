@@ -1,16 +1,10 @@
 [
   {
-    "name": "Mr.Robot",
-    "type": "bot",
     "color": "black",
     "score": 0,
-    "⚙": "Bot"
   },
   {
-    "name": "Mr.Data",
-    "type": "bot",
     "color": "red",
     "score": 0,
-    "⚙": "Bot"
   }
 ]
