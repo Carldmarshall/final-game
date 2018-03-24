@@ -25,6 +25,10 @@ body {
   background-color: rgba(216, 216, 216, 0.505);
  }
 
+ .winner-highlight{
+  background-color: rgba(216, 216, 216, 0.505);
+ }
+
  .vs {
     max-width: 450px;
     margin: auto;

@@ -111,24 +111,28 @@ class Game {
 
 	checkForWinner(row, col) {
 		const that = this;
+		let winningCellsCoordinats = [{row: row, col: col}]; 
 
 		// Check the ammount of coins of the one color in the given direction:
 		function checkDirection(direction) {
 		  let total = 0;
 		  let i = row + direction.i;
 		  let j = col + direction.j;
-		  let nextCellColor = that.board.getCellValue(i, j);
-
+		  let nextCellColor = that.board.getCellValue(i, j); 
+		  
 		  while (i >= 0 &&
 		    i < that.board.ROWS && // ROW = 6
 		    j >= 0 &&
 		    j < that.board.COLS && 
 		    nextCellColor === that.currentColor) {
+				winningCellsCoordinats.push({row: i, col: j});
+
 			    total++;
 			    i += direction.i;
 			    j += direction.j;
 			    nextCellColor = that.board.getCellValue(i, j);
-			}
+			    
+		  }
 		  return total;
 		}
 
@@ -137,8 +141,10 @@ class Game {
 		    checkDirection(directionA) +
 		    checkDirection(directionB);
 		  if (total >= 4) {
+		  	that.board.highlight(winningCellsCoordinats);
 		    return that.currentColor;
 		  } else {
+		  	winningCellsCoordinats = [{row: row, col: col}];
 		    return null;
 		  }
 		}

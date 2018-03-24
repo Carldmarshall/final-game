@@ -146,8 +146,15 @@ class Board {
         	//this.markNext(col);
 	    }
 
+
 	}
 
+	highlight(arrayOfCells){////////////////////////////////////// 
+    	for (let i= 0; i <arrayOfCells.length; i++){
+    		let $cell = $(`.col[data-row='${arrayOfCells[i].row}'][data-col='${arrayOfCells[i].col}']`);
+    		$cell.addClass('winner-highlight');	
+    	}
+    }
 	
 }
 
