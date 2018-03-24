@@ -12,13 +12,6 @@
     "score": "20"
   },
   {
-    "name": "Player 1",
-    "type": "human",
-    "color": "black",
-    "score": 19,
-    "⚙": "Player"
-  },
-  {
     "name": "T1",
     "type": "human",
     "color": "black",
@@ -26,38 +19,10 @@
     "⚙": "Player"
   },
   {
-    "name": "Mr.Robot",
-    "type": "bot",
-    "color": "black",
-    "score": 15,
-    "⚙": "Bot"
-  },
-  {
-    "name": "Mr.Robot",
-    "type": "bot",
-    "color": "black",
-    "score": 15,
-    "⚙": "Bot"
-  },
-  {
-    "name": "Mr.Robot",
-    "type": "bot",
-    "color": "blue",
-    "score": 14,
-    "⚙": "Bot"
-  },
-  {
-    "name": "Player 2",
+    "name": "Ekaterina",
     "type": "human",
-    "color": "red",
-    "score": 14,
+    "color": "black",
+    "score": 4,
     "⚙": "Player"
-  },
-  {
-    "name": "Mr.Data",
-    "type": "bot",
-    "color": "red",
-    "score": 14,
-    "⚙": "Bot"
   }
 ]

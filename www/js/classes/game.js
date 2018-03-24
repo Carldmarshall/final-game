@@ -57,12 +57,19 @@ class Game {
 			    		}
 
 				    	let winner = that.currentPlayer.name;
-				    	let highScoreList = await JSON._load('hiscore.json');
-				    	highScoreList.push(that.currentPlayer);
-				    	
-				    	highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
-				    	highScoreList = highScoreList.slice(0,10);
-				    	JSON._save("hiscore.json", highScoreList);
+
+				    	if (that.currentPlayer.name != "Player 1" && 
+				    		that.currentPlayer.name != "Player 2" &&
+				    	    that.currentPlayer.type != "bot"){
+
+					    	let highScoreList = await JSON._load('hiscore.json');
+
+					    	highScoreList.push(that.currentPlayer);
+					    	
+					    	highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
+					    	highScoreList = highScoreList.slice(0,10);
+					    	JSON._save("hiscore.json", highScoreList);
+					    }
 				    	$('#exampleModalLongTitle').text(" WINNER");
 				    	$('#myModal .modal-body').text(winner + " has won!");
 				    	$('#myModal').modal();
