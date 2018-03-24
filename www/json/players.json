@@ -1,13 +1,13 @@
 [
   {
-    "name": "Player 1",
+    "name": ".nm",
     "type": "human",
     "color": "black",
     "score": 0,
     "⚙": "Player"
   },
   {
-    "name": "Player 2",
+    "name": ".k",
     "type": "human",
     "color": "red",
     "score": 0,
