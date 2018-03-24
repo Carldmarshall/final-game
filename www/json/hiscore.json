@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Dennis",
+    "score": "56"
+  },
+  {
+    "name": "Siv",
+    "score": "23"
+  },
+  {
+    "name": "Anneth",
+    "score": "20"
+  },
+  {
+    "name": "T1",
+    "type": "human",
+    "color": "black",
+    "score": 18,
+    "⚙": "Player"
+  },
+  {
+    "name": "Ekaterina",
+    "type": "human",
+    "color": "black",
+    "score": 4,
+    "⚙": "Player"
+  }
+]
