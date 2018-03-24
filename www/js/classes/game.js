@@ -8,6 +8,7 @@ class Game {
 		this.board = undefined;
 		this.currentColor = undefined;
 		this.currentPlayer;
+		this.movesCount = 0;
 		let that = this;
 
 		// Makes the jsonflex Load work with Classes
@@ -40,6 +41,9 @@ class Game {
 				
 		   	// 3. Class Game has subscrition on the function of class Board onPlayerMove():
 		   	that.board.onPlayerMove = async function(row, col) {
+
+		   		that.movesCount++;
+		   		
 			    // As soon as class Board reports to the class Game that the player has just put a coin
 			    // check if there is a winner
 			    if (that.checkForWinner(row, col)){
@@ -59,16 +63,23 @@ class Game {
 				    	highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
 				    	highScoreList = highScoreList.slice(0,10);
 				    	JSON._save("hiscore.json", highScoreList);
+				    	$('#exampleModalLongTitle').text(" WINNER");
 				    	$('#myModal .modal-body').text(winner + " has won!");
 				    	$('#myModal').modal();
 			    	}, 200);
-			    } 
+			    }
+
+			    if (that.movesCount == 42){
+                	that.board.setGameOver();
+                	$('#exampleModalLongTitle').text(" GAME OVER");
+                	$('#myModal .modal-body').text(" It is a draw!");
+				    $('#myModal').modal();
+				    return;
+                } 
 
                 that.currentPlayer.score++;
                 $("#player1Score").text(that.player1.score);
-                $("#player2Score").text(that.player2.score);
-
-
+                $("#player2Score").text(that.player2.score);  
 
 			    that.currentColor = that.currentColor == that.player1.color? that.player2.color: that.player1.color;
                 that.currentPlayer = that.currentColor == that.player1.color? that.player1: that.player2;

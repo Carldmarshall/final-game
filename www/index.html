@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Connect4 - Start</title>
+    <title>Race 4 Space - Start</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,6 +25,7 @@
   <body id = "body_index">
 
     <!-- Navigation -->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-inline-block active">
       <div class="container">
           <a class="navbar-brand" href="index.html">
@@ -57,19 +58,27 @@
               </a>
             </li>
           </ul>
+          <audio autoplay loop id="player" src="/mp3/race4space.mp3"></audio>
+          <div class='text-center'>
+              <button1 onclick="document.getElementById('player').muted=!document.getElementById('player').muted">🔈🔇</button1>
+          </div>
         </div>
       </div>
+     </div>
     </nav>
 
-    
-
     <!-- Page Content -->
+    
+    <!-- Header image -->
+    <div class="col-12  text-center">
+      <img id= "main_picture1" class="img-fluid games_pictures2 text-center" src="imgs\header.png">
+    </div>
+    
+   
+
     <div class="container all-except-footer">
 
       <!-- Portfolio Item Heading -->
-      <h1 class="my-4 text-center">Race 4 Space:
-        <small>online version of the classic game</small>
-      </h1>
 
       <!-- Portfolio Item Row -->
       <div class="row  py-3">
@@ -90,9 +99,7 @@
           </div>
         </div>
       </div>
-
-
-        
+      
       <div class="row">
         <div class="col-md-6 col-sm-12 text-justify">
           <h3 class="my-3">Welcome to Race4Space.com! </h3>
@@ -161,6 +168,7 @@
    
 
     <footer class="py-5 bg-dark">
+           
 
       <div class="container">
         <p class="m-0 text-center text-white">Group 2:  AJ - Carl - Ekaterina - Gabriel - Jesper - Sandhya - Urban    / Copyright &copy; Connect4Space 2018</p>

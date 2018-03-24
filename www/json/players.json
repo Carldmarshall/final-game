@@ -1,10 +1,16 @@
 [
   {
+    "name": "Player 1",
+    "type": "human",
     "color": "black",
     "score": 0,
+    "⚙": "Player"
   },
   {
+    "name": "Player 2",
+    "type": "human",
     "color": "red",
     "score": 0,
+    "⚙": "Player"
   }
 ]

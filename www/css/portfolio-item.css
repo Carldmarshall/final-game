@@ -34,7 +34,9 @@ footer {
 .games_pictures{	
 	border-radius: 20px;	
 }
-
+.games_pictures2{	
+	border-radius: 60px;	
+}
 
 .ruless_pictures{	
 	border-radius: 20px;	
@@ -42,6 +44,13 @@ footer {
 
 #main_picture{
 	width: 70%;
+}
+
+#main_picture1{
+	width: 100%;
+	text-align: center;
+	border: #7b4397;
+	border: solid;
 }
 
 .text-center {
@@ -197,7 +206,5 @@ h3, h1 {
     font-family: 'MyWebFont', Arial, sans-serif;
     font-weight:normal;
     font-style:normal;
-    }
-
-
+}
 

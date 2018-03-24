@@ -59,33 +59,5 @@
     "color": "red",
     "score": 13,
     "⚙": "Bot"
-  },
-  {
-    "name": "Mr.Data",
-    "type": "bot",
-    "color": "red",
-    "score": 13,
-    "⚙": "Bot"
-  },
-  {
-    "name": "T1",
-    "type": "human",
-    "color": "black",
-    "score": 10,
-    "⚙": "Player"
-  },
-  {
-    "name": "Mr.Data",
-    "type": "bot",
-    "color": "red",
-    "score": 13,
-    "⚙": "Bot"
-  },
-  {
-    "name": "Ratbads",
-    "type": "human",
-    "color": "black",
-    "score": 12,
-    "⚙": "Player"
   }
 ]
