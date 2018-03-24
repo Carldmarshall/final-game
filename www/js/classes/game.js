@@ -69,12 +69,21 @@ class Game {
 					    	highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
 					    	highScoreList = highScoreList.slice(0,10);
 					    	JSON._save("hiscore.json", highScoreList);
-					    }
+					    } // Here comes a modal instead of an alert, see modal section in game.html
+					    if (that.player1.type == "bot" || that.player2.type == "bot") { // if either player is a bot
+			    		$('#exampleModalLongTitle').text(" YOU WON?");
+				    	$('#myModal .modal-body').text(winner + " has won against a bot? Get a life! \n\ Why don't you outside and meet someone? 😊");
+				    	$('#myModal').modal();
+			    		}else{
+				    	$('#exampleModalLongTitle').text(" WINNER"); // a modal instead of an alert, see modal in game.html
+				    	$('#myModal .modal-body').text(winner + " has won!");
+				    	$('#myModal').modal();
 				    	$('#exampleModalLongTitle').text(" WINNER");
 				    	$('#myModal .modal-body').text(winner + " has won!");
 				    	$('#myModal').modal();
-			    	}, 200);
+			    	}}, 200);
 			    }
+			   
 
 			    if (that.movesCount == 42){
                 	that.board.setGameOver();

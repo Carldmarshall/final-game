@@ -159,6 +159,12 @@ p2 {
 	display: block;
 }
 
+.p0 {
+	font-family: 'MyWebFont', Arial, sans-serif;
+	color: #aaa;
+	display: block;
+}
+
 .p1 {
 	font-family: 'MyWebFont', Arial, sans-serif;
 	color: rgb(97, 109, 214);
@@ -208,6 +214,13 @@ h3, h1 {
     font-style:normal;
 }
 
+.modalNoBottom {
+	color: rgb(230, 206, 68);
+	font-family: 'MyWebFont', Arial, sans-serif;
+	border-bottom: 0px solid;
+	margin-left: 38%;
+}
+
 .modal1 {
 	color: rgb(230, 206, 68);
 	font-family: 'MyWebFont', Arial, sans-serif;
@@ -227,5 +240,6 @@ h3, h1 {
 .modalx {
 	color: rgb(230, 206, 68);
 	font-family: Arial, sans-serif;
+
 }
 
