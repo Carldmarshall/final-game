@@ -59,9 +59,6 @@
     "color": "red",
     "score": 13,
     "⚙": "Bot"
-    "color": "red",
-    "score": 14,
-    "⚙": "Bot"
   },
   {
     "name": "Mr.Data",
@@ -76,11 +73,6 @@
     "color": "black",
     "score": 10,
     "⚙": "Player"
-    "name": "Mr.Data",
-    "type": "bot",
-    "color": "red",
-    "score": 13,
-    "⚙": "Bot"
   },
   {
     "name": "Mr.Data",
