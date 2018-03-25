@@ -70,15 +70,12 @@ class Game {
 					    	highScoreList = highScoreList.slice(0,10);
 					    	JSON._save("hiscore.json", highScoreList);
 					    } // Here comes a modal instead of an alert, see modal section in game.html
-					    if (that.player1.type == "bot" || that.player2.type == "bot") { // if either player is a bot
-			    		$('#exampleModalLongTitle').text(" YOU WON?");
+					    if (that.player1.type == "bot" || that.player2.type == "bot") { // if either player is a bot display this message
+			    		$('#exampleModalLongTitle').text("YOU WON?");
 				    	$('#myModal .modal-body').text(winner + " has won against a bot? Get a life! \n\ Why don't you outside and meet someone? 😊");
 				    	$('#myModal').modal();
-			    		}else{
-				    	$('#exampleModalLongTitle').text(" WINNER"); // a modal instead of an alert, see modal in game.html
-				    	$('#myModal .modal-body').text(winner + " has won!");
-				    	$('#myModal').modal();
-				    	$('#exampleModalLongTitle').text(" WINNER");
+			    		}else{  // otherwise display this message. Another modal instead of an alert, see modal in game.html
+				    	$('#exampleModalLongTitle').text("\xa0\xa0WINNER\xa0"); 
 				    	$('#myModal .modal-body').text(winner + " has won!");
 				    	$('#myModal').modal();
 			    	}}, 200);
