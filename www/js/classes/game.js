@@ -44,20 +44,19 @@ class Game {
 
 		   		that.movesCount++;
 		   		
+				that.currentPlayer.score++;
+                $("#player1Score").text(that.player1.score);
+                $("#player2Score").text(that.player2.score); 
+
+
 			    // As soon as class Board reports to the class Game that the player has just put a coin
 			    // check if there is a winner
 			    if (that.checkForWinner(row, col)){
 			    	that.board.setGameOver(); // - order to Board to stop the game if there is a winner
 			    	let winner = that.currentPlayer.name;
-			    	setTimeout(async function(){
-			    		if (that.currentPlayer == that.player1) {
-			    			that.currentPlayer = that.player2;
-			    		} else {
-			    			that.currentPlayer = that.player1;
-			    		}
+			    	setTimeout(async function(){		
 
-				    	let winner = that.currentPlayer.name;
-
+				    	//Remove "Player1", "Player2" and bots from the High Score list
 				    	if (that.currentPlayer.name != "Player 1" && 
 				    		that.currentPlayer.name != "Player 2" &&
 				    	    that.currentPlayer.type != "bot"){
@@ -66,22 +65,43 @@ class Game {
 
 					    	highScoreList.push(that.currentPlayer);
 					    	
-					    	highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
-					    	highScoreList = highScoreList.slice(0,10);
+					    	//Leave just the best result of the player in the High Score List
+					    	for (let i = highScoreList.length - 1; i >= 0; i--){
+					    		for (let j = i - 1; j >= 0; j--){
+					    			if (highScoreList[i].name == highScoreList[j].name){
+					    				if (highScoreList[i].score/1 <= highScoreList[j].score/1){
+					    					highScoreList.splice(j, 1);
+					    					i--;
+					    				}
+					    				else{
+					    					highScoreList.splice(i, 1);
+					    					break;
+					    				}
+					    			}
+					    		}
+					    	} //for Leave the best result
+
+							highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
+					    	highScoreList = highScoreList.slice(0, 4);
+
 					    	JSON._save("hiscore.json", highScoreList);
 					    } // Here comes a modal instead of an alert, see modal section in game.html
 					    if (that.player1.type == "bot" || that.player2.type == "bot") { // if either player is a bot display this message
-			    		$('#exampleModalLongTitle').text("YOU WON?");
-				    	$('#myModal .modal-body').text(winner + " has won against a bot? Get a life! \n\ Why don't you outside and meet someone? 😊");
-				    	$('#myModal').modal();
+			    			$('#exampleModalLongTitle').text("YOU WON?");
+				    		$('#myModal .modal-body').text(winner + " has won against a bot? Get a life! \n\ Why don't you outside and meet someone? 😊");
+				    		$('#myModal').modal();
 			    		}else{  // otherwise display this message. Another modal instead of an alert, see modal in game.html
-				    	$('#exampleModalLongTitle').text("\xa0\xa0WINNER\xa0"); 
-				    	$('#myModal .modal-body').text(winner + " has won!");
-				    	$('#myModal').modal();
-			    	}}, 200);
-			    }
-			   
+					    	$('#exampleModalLongTitle').text("\xa0\xa0WINNER\xa0"); 
+					    	$('#myModal .modal-body').text(winner + " has won!");
+					    	$('#myModal').modal();
+					    }	
+			    	}, 200);
+			    
+			    	return;
+			    } // if checkForWinner
 
+
+			    // Check if it is a draw
 			    if (that.movesCount == 42){
                 	that.board.setGameOver();
                 	$('#exampleModalLongTitle').text(" GAME OVER");
@@ -90,14 +110,12 @@ class Game {
 				    return;
                 } 
 
-                that.currentPlayer.score++;
-                $("#player1Score").text(that.player1.score);
-                $("#player2Score").text(that.player2.score);  
-
+                 
+               	// Switch the players
 			    that.currentColor = that.currentColor == that.player1.color? that.player2.color: that.player1.color;
                 that.currentPlayer = that.currentColor == that.player1.color? that.player1: that.player2;
 
-
+                // Notify the board that we switched the players
 			    that.board.setCurrentColorAndType(that.currentColor, that.currentPlayer.type);
 
 			    // Change the high-light of the current player on the board

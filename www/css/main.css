@@ -92,13 +92,28 @@ body {
 
  }
 
- .col.red {
-     background-image:url(../imgs/player260.png);
-     /*background-color: red;*/
- }
- .col.black {
-     background-image:url(../imgs/player160.png);
- }
+
+
+@-webkit-keyframes moveHighlight {
+  from {
+    background-color: rgba(216, 216, 216, 0.505);
+/*      border-color: #984398;*/
+  }
+  to {
+    background-color: rgba(216, 216, 216, 0.205);
+    /*border-color: #187c81;*/
+  }
+}
+
+.col.red {
+  background-image:url(../imgs/player260.png);
+  -webkit-animation: moveHighlight 2s;
+}
+
+.col.black {
+   background-image:url(../imgs/player160.png);
+   -webkit-animation: moveHighlight 2s;
+}
  
 
  /* TABLE RELATED STYLING CHANGES */

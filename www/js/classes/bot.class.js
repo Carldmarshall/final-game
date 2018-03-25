@@ -9,7 +9,7 @@ class Bot extends Player{
 	botMove(board) {
 		setTimeout(function(){
 			do{
-				const randomNumber = Math.floor(Math.random() * (board.COLS-1));
+				const randomNumber = Math.floor(Math.random() * (board.COLS));
 				if (board.existsEmpty(randomNumber)) {
 					board.put(randomNumber);
 					break;

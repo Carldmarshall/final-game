@@ -10,7 +10,7 @@ class Board {
 	    this.COLS = 7;
 	    this.place = place;
 	    this.isBot = false;
-	    this.$cellOfLastMove;
+
 	    this.createGrid();
 	    this.setupEventListeners();
 	    
@@ -72,27 +72,23 @@ class Board {
 	        that.markNext($(this).data('col'));
 	    });
 
+
 	    $board.on('mouseleave', '.col', function(){
-	    	$('.col').removeClass('cell-highLight');
 	        $('.col').removeClass('next-' + that.color);
 	    });
+
 
 	    $board.on('click', '.col.empty', function(){
 	    	if (that.isBot) return; // "disable" events if bot
 	    	if (that.isGameOver) return;
-	    	if (that.$cellOfLastMove){
-	    		that.$cellOfLastMove.removeClass('cell-highLight');
-	    	}
 
 	        const col = $(this).data('col');
 	        const $lastEmptyCell = that.findLastEmptyCell(col);
-
 	        $lastEmptyCell.removeClass('empty next-' + that.color);
         	$lastEmptyCell.addClass(that.color);
-        	that.$cellOfLastMove = $lastEmptyCell;
-	        that.$cellOfLastMove.addClass('cell-highLight');
 	        that.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));
 	    	that.markNext(col);
+
 	    });
 
   	}
@@ -130,26 +126,20 @@ class Board {
 		}
 	}
 
+
 	// This method is for the Bot, it puts a coin in the given column
 	put(col){
 		if (this.isGameOver) return;
 		let $lastEmptyCell = this.findLastEmptyCell(col);
 	    if ($lastEmptyCell) {
-	    	if (this.$cellOfLastMove){
-	    		this.$cellOfLastMove.removeClass('cell-highLight');
-	    	}
 			$lastEmptyCell.removeClass('empty next-' + this.color);
         	$lastEmptyCell.addClass(this.color);
-        	this.$cellOfLastMove = $lastEmptyCell;
-        	this.$cellOfLastMove.addClass('cell-highLight');
         	this.onPlayerMove($lastEmptyCell.data('row'), $lastEmptyCell.data('col'));
-        	//this.markNext(col);
 	    }
-
-
 	}
 
-	highlight(arrayOfCells){////////////////////////////////////// 
+
+	highlight(arrayOfCells){
     	for (let i= 0; i <arrayOfCells.length; i++){
     		let $cell = $(`.col[data-row='${arrayOfCells[i].row}'][data-col='${arrayOfCells[i].col}']`);
     		$cell.addClass('winner-highlight');	

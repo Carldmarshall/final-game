@@ -1,25 +1,27 @@
 [
   {
-    "name": "Dennis",
-    "score": "56"
-  },
-  {
     "name": "Siv",
-    "score": "23"
-  },
-  {
-    "name": "Anneth",
-    "score": "20"
-  },
-  {
-    "name": "T1",
     "type": "human",
     "color": "black",
-    "score": 18,
+    "score": "23",
     "⚙": "Player"
   },
   {
-    "name": "Ekaterina",
+    "name": "Dennis",
+    "type": "human",
+    "color": "black",
+    "score": 4,
+    "⚙": "Player"
+  },
+  {
+    "name": "vasja",
+    "type": "human",
+    "color": "black",
+    "score": 4,
+    "⚙": "Player"
+  },
+  {
+    "name": "Anneth",
     "type": "human",
     "color": "black",
     "score": 4,
