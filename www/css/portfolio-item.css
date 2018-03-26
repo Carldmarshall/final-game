@@ -240,6 +240,12 @@ h3, h1 {
 .modalx {
 	color: rgb(230, 206, 68);
 	font-family: Arial, sans-serif;
-
+	border: none;
 }
+
+.modalx:hover {
+	color: rgb(230, 206, 68);
+	font-family: Arial, sans-serif;
+}
+
 

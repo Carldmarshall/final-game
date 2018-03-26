@@ -36,7 +36,7 @@ class Game {
 
 		   	if (that.currentPlayer.type == "bot"){                	
                 	that.currentPlayer.botMove(that.board);
-				}
+			}
 
 				
 		   	// 3. Class Game has subscrition on the function of class Board onPlayerMove():
@@ -86,15 +86,20 @@ class Game {
 
 					    	JSON._save("hiscore.json", highScoreList);
 					    } // Here comes a modal instead of an alert, see modal section in game.html
-					    if (that.player1.type == "bot" || that.player2.type == "bot") { // if either player is a bot display this message
-			    			$('#exampleModalLongTitle').text("YOU WON?");
-				    		$('#myModal .modal-body').text(winner + " has won against a bot? Get a life! \n\ Why don't you outside and meet someone? 😊");
+					    if (that.player1.type == "human" && that.player2.type == "bot"){ // if you play against a bot and win display this message
+			    			$('#exampleModalLongTitle').text("YOU WON!");
+				    		$('#myModal .modal-body').html("Dear " + winner + ", you won against a bot. That's nice, but we want you to have more friends. Go outside and meet someone irl! YOLO! 😊");
 				    		$('#myModal').modal();
-			    		}else{  // otherwise display this message. Another modal instead of an alert, see modal in game.html
+			    		} else if (that.player1.type == "bot" && that.player2.type == "bot"){  //unless both players are bots
+					    	$('#exampleModalLongTitle').text("BOT WARS"); 
+					    	$('#myModal .modal-body').html(winner + ' has won,<br> and will rule over all other bots!');
+					    	$('#myModal').modal();
+					    } else {				// otherwise display this message. Another modal instead of an alert, see modal in game.html
 					    	$('#exampleModalLongTitle').text("\xa0\xa0WINNER\xa0"); 
-					    	$('#myModal .modal-body').text(winner + " has won!");
+					    	$('#myModal .modal-body').html(winner + " has won! <br>You are the smartest human in the game.👍");
 					    	$('#myModal').modal();
 					    }	
+					    	
 			    	}, 200);
 			    
 			    	return;

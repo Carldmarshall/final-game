@@ -126,17 +126,21 @@
     <div class="modal-content modal1"><!-- modal1 modal2 modalx are all css-classes I created for controlling the modal --> 
       <div class="modal-header modalNoBottom">
         <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="modalx" aria-hidden="true">&times;</span>
-        </button>
+    
+        <span class="close modalx" data-dismiss="modal" aria-label="Close" aria-hidden="true">&times; </span>
+        <!--<button type="button" class="close modalx" data-dismiss="modal" aria-label="Close">
+          Made a span instead as clicking the bootstrap button gave it a colored border--> 
+        
+       <!-- </button> -->
       </div>
       <div class="modal2">
         <img src="imgs/pvsp.png" width="100%"><!-- modal image can be changed for another -->
       </div>
 
       <div class="modal-body modal2">
-        ...
+         ...
       </div>
+          
     </div>
   </div>
 </div>
@@ -145,7 +149,6 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 
   </body>
 </html>
