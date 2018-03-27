@@ -132,8 +132,10 @@ table#center {
 	text-align: center;
 }
 
-.highscoreimg {
+#highscoreimg {
 	text-align: center;
+	width: 100%;
+	max-width: 500px;
 }
 
 .rules_pictures {
