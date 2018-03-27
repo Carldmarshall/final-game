@@ -4,11 +4,11 @@
     "type": "human",
     "color": "black",
     "score": 0,
-    "⚙": "Bot"
+    "⚙": "Player"
   },
   {
-    "name": "Player 2",
-    "type": "human",
+    "name": "Mr.Robot",
+    "type": "bot",
     "color": "red",
     "score": 0,
     "⚙": "Bot"

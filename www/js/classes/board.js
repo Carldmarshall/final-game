@@ -118,12 +118,10 @@ class Board {
 		this.isBot = type == "bot"; // true or false
 	}
 
-	existsEmpty(col){
-		if (this.findLastEmptyCell(col)){
-			return true;
-		}else{
-			return false;
-		}
+	getLastEmptyRow(col){
+		let $cell = this.findLastEmptyCell(col);
+		if ($cell == null) return null;
+		return $cell.data('row');
 	}
 
 

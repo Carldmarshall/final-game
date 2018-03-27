@@ -34,9 +34,9 @@ class Game {
 		   	$('#namePlayer1').addClass('p1'); //// set the High-light on the current player on the board
 		   	$('#namePlayer2').text(that.player2.name); //display the names on the game board
 
-		   	if (that.currentPlayer.type == "bot"){                	
-                	that.currentPlayer.botMove(that.board);
-			}
+		   	if (that.currentPlayer.type == "bot"){  // If two players are bots              	
+                	that.currentPlayer.smartBotMove(that.board, that.player2.color); 
+				}
 
 				
 		   	// 3. Class Game has subscrition on the function of class Board onPlayerMove():
@@ -134,8 +134,9 @@ class Game {
 			    	$('#namePlayer1').addClass('p1');
 			    }
 			    
-                if (that.currentPlayer.type == "bot"){                	
-                	that.currentPlayer.botMove(that.board);
+                if (that.currentPlayer.type == "bot"){     
+                	let rivalColor = that.currentColor == that.player1.color? that.player2.color: that.player1.color;           	
+                	that.currentPlayer.smartBotMove(that.board, rivalColor);
 				}
 			}
 
