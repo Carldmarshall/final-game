@@ -23,7 +23,7 @@ footer {
  	width: 100%;
  }
  .all-except-footer {
-	min-height: calc(100vh - 170px);
+	min-height: calc(100vh - 70px);
 	}
 
 .gradient {
@@ -50,7 +50,7 @@ footer {
 
 #main_picture{
 	width: 70%;
-	margin-top: 4%;
+	margin-top: 3%;
 
 }
 
