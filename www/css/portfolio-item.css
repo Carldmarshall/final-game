@@ -16,6 +16,7 @@ body {
 }
 
 footer {
+	font-family: 'MyWebFont';
 	padding: 20px;
 	position: relative;
   	bottom: 0;
