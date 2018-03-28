@@ -31,15 +31,15 @@ footer {
     background: linear-gradient(to left,#7b4397,#136569);
 }
 
-.games_pictures{	
-	border-radius: 20px;	
+.games_pictures{
+	border-radius: 20px;
 }
-.games_pictures2{	
-	border-radius: 60px;	
+.games_pictures2{
+	border-radius: 60px;
 }
 
-.ruless_pictures{	
-	border-radius: 20px;	
+.ruless_pictures{
+	border-radius: 20px;
 }
 
 #main_picture{
@@ -60,7 +60,7 @@ footer {
 
 .tabletext
 {
-	
+
 }
 
 /*#fourrows {
@@ -68,7 +68,7 @@ footer {
 }*/
 
 table#center {
-    margin-left:auto; 
+    margin-left:auto;
     margin-right:auto;
   }
 
@@ -91,7 +91,7 @@ table#center {
 }
 
 .highscore-button {
-	margin-left:auto; 
+	margin-left:auto;
     margin-right:auto;
 }
 
@@ -124,7 +124,7 @@ table#center {
 		border-color: #187c81;}
 }
 
-.change_color:hover {	
+.change_color:hover {
 	transform:scale(1.1,1.1);
 }
 
