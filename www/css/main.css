@@ -117,27 +117,22 @@ body {
  
 
  /* TABLE RELATED STYLING CHANGES */
-  th, td 
+  td 
         {
             
-            background: #7b4397; /* 48,49,50 same as .gradient class properties(in portfolio-item.css) */
-            background: -webkit-linear-gradient(to left,#7b4397,#136569);
-            background: linear-gradient(to left,#7b4397,#136569);
-
-            margin:auto;
             border:solid 1px #099e2c;
             padding:2px 4px;
-            font:15px Tahoma;
-            margin-top: -10px;
             
+            margin-top: -10px;
             color: white;
-            font-weight: bold;
             width: 300px;
             height: 40px;
             text-align: center;
             border-collapse: separate;
             border-spacing: 10px;
-           
+            font-family: 'MyWebFont', Arial, sans-serif;
+            font-size: 3vh;
+            font-weight: normal; 
         }
 
 
@@ -149,9 +144,9 @@ body {
             background: linear-gradient(to left,#7b4397,#136569);
 
             margin:auto;
-            border:solid 1px #099e2c;
+            border:solid 2px #099e2c;
             padding:2px 4px;
-            margin-top: -10px;
+            margin-top: -40px;
             
             height: 50%;
             border-collapse: separate;
@@ -161,19 +156,21 @@ body {
 
         }
 
-        
         th 
         {
-            border-style: solid 5px orange;
-            font-size: 25px;
-            font-weight:bold;
             color: white;
             text-align: center;
-            text-shadow: 3px 2px green;
-
-            font-weight: bold;
-          
-
+            text-shadow: 3px 2px purple;
+            border:solid 1px #099e2c;
+            
+            
+            border-collapse: separate;
+            border-spacing: 10px;
+            
+            font-family: 'MyWebFont', Arial, sans-serif;
+            font-size: 4vh;
+            font-weight: normal;
+  
          }
 
             

@@ -3,7 +3,11 @@
     "name": "Siv",
     "type": "human",
     "color": "black",
+<<<<<<< Updated upstream
     "score": 7,
+=======
+    "score": "7",
+>>>>>>> Stashed changes
     "⚙": "Player"
   },
   {
