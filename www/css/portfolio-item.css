@@ -151,11 +151,20 @@ table#center {
 	max-width: 500px;
 }
 
-.rules_pictures {
+.rules_pictures1 
+{
 	width:500px;
 	border-radius: 20px;
 	padding-bottom: 10px;
 }
+.rules_pictures2 
+{
+    cursor: pointer;
+	width:500px;
+	border-radius: 20px;
+	padding-bottom: 10px;
+}
+
 @font-face {
 	font-family: 'MyWebFont';
 	src: url('fonts/alien1-webfont.woff2') format('woff2');
