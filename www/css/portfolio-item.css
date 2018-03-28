@@ -116,7 +116,7 @@ table#center {
 	font-family: 'MyWebFont', Arial, sans-serif;
 	font-weight: normal;
 	border-radius: 60px;
-    -webkit-animation: mymove 4s infinite;
+    -webkit-animation: mymove 3s alternate infinite;
 }
 
 @-webkit-keyframes mymove {
