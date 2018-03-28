@@ -54,14 +54,12 @@
 
   <body id = "body_index">
 
-     <!--<img src="imgs/logo.png" width="490px" href="index.html"> -->
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-inline-block active">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-              <h6>Home</h6>
-              </a>
+      <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <h6>Home</h6>
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -97,16 +95,17 @@
     <div class="container all-except-footer text-center">
 
       <div class="vs col-md-12 col-12 order-3" >
-          <img src="/imgs/pvsp.png" width="100%" text-center></img> 
+          <img src="/imgs/pvsp.png" width="100%" text-center>
       </div>
 
-      <div id="gameboard"></div>
+      <div class="cursor1" id="gameboard">
+      </div>
 
       <div class = "row">
 
         <div  class = "col-md-4 col-6 text-center mt-3 order-1 order-md-1 p0">
           <span id="namePlayer1" class="font-weight-bold text-uppercase"></span>
-          <p1 id = "player1Score" > <"coins"></p1>
+          <p1 id = "player1Score"> <"coins"></p1>
         </div>
 
         <div class="col-md-4 text-center mt-3 order-3 order-md-2">
@@ -119,33 +118,33 @@
         </div>
 
       </div>
-    </div>
-    <!-- Modal -->
-<div class="modal fade modal1" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content modal1"><!-- modal1 modal2 modalx are all css-classes I created for controlling the modal --> 
-      <div class="modal-header modalNoBottom">
-        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
     
-        <span class="close modalx" data-dismiss="modal" aria-label="Close" aria-hidden="true">&times; </span>
-        <!--<button type="button" class="close modalx" data-dismiss="modal" aria-label="Close">
-          Made a span instead as clicking the bootstrap button gave it a colored border--> 
-        
-       <!-- </button> -->
-      </div>
-      <div class="modal2">
-        <img src="imgs/pvsp.png" width="100%"><!-- modal image can be changed for another -->
-      </div>
-
-      <div class="modal-body modal2">
-         ...
-      </div>
+      <!-- Modal -->
+      <div class="modal fade modal1" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content modal1"><!-- modal1 modal2 modalx are all css-classes I created for controlling the modal --> 
+            <div class="modal-header modalNoBottom">
+              <h5 class="modal-title" id="exampleModalLongTitle"></h5>
           
-    </div>
-  </div>
-</div>
+              <span class="close modalx" data-dismiss="modal" aria-label="Close" aria-hidden="true">&times; </span>
+              <!--<button type="button" class="close modalx" data-dismiss="modal" aria-label="Close">
+                Made a span instead as clicking the bootstrap button gave it a colored border--> 
+              
+             <!-- </button> -->
+            </div>
+            <div class="modal2">
+              <img src="imgs/pvsp.png" width="100%"><!-- modal image can be changed for another -->
+            </div>
 
-   
+            <div class="modal-body modal2">
+               ...
+            </div>
+                
+          </div>
+        </div>
+      </div>
+
+    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
