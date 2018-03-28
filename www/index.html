@@ -39,7 +39,7 @@
     <!-- Display hicore on Homepage -->
     <script src="./jsonflex.js"></script>
     <script type="text/javascript" src="js/ds_hiscore_hp.js"></script>
-
+    <script type="text/javascript" src="js/changeImage.js"></script>
     <!-- Custom styles for this template -->
     <link href="css/portfolio-item.css" rel="stylesheet">
 
@@ -83,7 +83,9 @@
           </ul>
           <audio autoplay loop id="player" src="/mp3/race4space.mp3"></audio>
           <div class='text-center'>
-              <button1 onclick="document.getElementById('player').muted=!document.getElementById('player').muted">🔈🔇</button1>
+              <button1 onclick="document.getElementById('player').muted=!document.getElementById('player').muted">
+                  <img src="/imgs/audioStop.png" width="20ch" height="20vh" alt="Stop" id="pic" onclick="changeImage()">
+              </button1>
           </div>
         </div>
       </div>
@@ -91,13 +93,13 @@
     </nav>
 
     <!-- Page Content -->
-    
+
     <!-- Header image -->
     <div class="col-12  text-center">
       <img id= "main_picture1" class="img-fluid games_pictures2 text-center" src="imgs\header.png">
     </div>
-    
-   
+
+
 
     <div class="container all-except-footer">
 
@@ -122,14 +124,14 @@
           </div>
         </div>
       </div>
-      
+
       <div class="row">
         <div class="col-md-6 col-sm-12 text-justify">
           <h3 class="my-3">Welcome to Race4Space.com! </h3>
           <p>Join thousands of players playing tens with us online every day!You can play against opponents from around the world or invite your friend. An AI-player is always here for you. Enjoy friendly and casual gaming at any time of the day, 24 hours a day!</p>
           <!-- <h3 class="my-3"></h3> -->
         </div>
-     
+
 
         <div class="col-md-1 col-sm-12"></div>
 
@@ -137,16 +139,16 @@
         <div class="col-md-4 col-sm-12 text-center gradient games_pictures">
           <h3 class="my-3"> The Best Player : </h3>
           <div >
-            <h3 id="display"> </h3>  
-            <h3>coins</h3> 
+            <h3 id="display"> </h3>
+            <h3>coins</h3>
           </div>
-              
+
         </div>
 
-        
+
       </div>
 
-      
+
       <!-- /.row -->
 
       <!-- Related Projects Row -->
@@ -188,10 +190,10 @@
 
     <!-- Footer -->
 
-   
+
 
     <footer class="py-5 bg-dark">
-           
+
 
       <div class="container">
         <p class="m-0 text-center text-white">Group 2:  AJ - Carl - Ekaterina - Gabriel - Jesper - Sandhya - Urban    / Copyright &copy; Connect4Space 2018</p>
