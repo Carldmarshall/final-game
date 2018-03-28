@@ -1,4 +1,4 @@
-var newsrc = "audioplay.png";
+let newsrc = "audioplay.png";
 
 function changeImage() {
   if ( newsrc == "audioplay.png" ) {
