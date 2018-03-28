@@ -1,16 +1,16 @@
 [
   {
-    "name": "sandy",
-    "type": "human",
+    "name": "Mr Data",
+    "type": "bot",
     "color": "black",
     "score": 0,
-    "⚙": "Player"
+    "⚙": "SmartBot"
   },
   {
-    "name": "Mr.Data",
-    "type": "bot",
+    "name": "Player 1",
+    "type": "human",
     "color": "red",
     "score": 0,
-    "⚙": "EasyBot"
+    "⚙": "Player"
   }
 ]
