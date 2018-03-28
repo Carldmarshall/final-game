@@ -4,26 +4,6 @@ $(function (){
     data = data.sort(function(a,b){return a.score - b.score});
 
     // display first
-    $('#display').html(data[0].name + "<br/>" +data[0].score);
+    $('#display').html(('Bestplayer') +" " + ":"  + " " + data[0].name + " " +data[0].score);
   });
-}); 
-
-
-   
-
-                    
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
+});
