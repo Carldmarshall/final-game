@@ -193,7 +193,7 @@ p2 {
 h6 {
 	color: rgb(180, 180, 180);
 	font-family: 'MyWebFont', Arial, sans-serif;
-	font-size: 3vh;
+	font-size: 1.35rem;
 	vertical-align: auto;
 	font-weight: normal;
 	margin-top: auto;
@@ -202,7 +202,7 @@ h6 {
 h6:hover {
 	color: rgb(101, 206, 101);
 	font-family: 'MyWebFont', Arial, sans-serif;
-	font-size: 3vh;
+	font-size: 1.35rem;
 	font-weight: normal;
 	margin-top: auto;
 	margin-bottom: auto;
