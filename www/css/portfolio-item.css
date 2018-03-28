@@ -49,6 +49,8 @@ footer {
 
 #main_picture{
 	width: 70%;
+	margin-top: 1%;
+
 }
 
 #main_picture1{
@@ -56,6 +58,7 @@ footer {
 	text-align: center;
 	border: #7b4397;
 	border: solid;
+	margin-top: 1%;
 }
 
 .text-center {
