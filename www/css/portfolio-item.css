@@ -31,6 +31,10 @@ footer {
     background: linear-gradient(to left,#7b4397,#136569);
 }
 
+#pic {
+	vertical-align: top;
+}
+
 .games_pictures{
 	border-radius: 20px;
 }

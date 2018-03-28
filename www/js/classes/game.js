@@ -12,7 +12,7 @@ class Game {
 		let that = this;
 
 		// Makes the jsonflex Load work with Classes
-		JSON._classes(Player, Bot);
+		JSON._classes(Player, Bot, EasyBot, SmartBot);
 		// Get the information about the players (load the data from 
 		// players.json file):
 		JSON._load('players.json').then(function(players) {  // subscription to the resulata of loading from Json-file:
@@ -35,7 +35,7 @@ class Game {
 		   	$('#namePlayer2').text(that.player2.name); //display the names on the game board
 
 		   	if (that.currentPlayer.type == "bot"){  // If two players are bots              	
-                	that.currentPlayer.smartBotMove(that.board, that.player2.color); 
+                	that.currentPlayer.botMove(that.board, that.player2.color); 
 				}
 
 				
@@ -136,7 +136,7 @@ class Game {
 			    
                 if (that.currentPlayer.type == "bot"){     
                 	let rivalColor = that.currentColor == that.player1.color? that.player2.color: that.player1.color;           	
-                	that.currentPlayer.smartBotMove(that.board, rivalColor);
+                	that.currentPlayer.botMove(that.board, rivalColor);
 				}
 			}
 
