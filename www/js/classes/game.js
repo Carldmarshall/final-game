@@ -81,7 +81,7 @@ class Game {
 					    		}
 					    	} //for Leave the best result
 
-							highScoreList = highScoreList.sort(function(a,b){return b.score - a.score});
+							highScoreList = highScoreList.sort(function(a,b){return a.score - b.score});
 					    	highScoreList = highScoreList.slice(0, 4);
 
 					    	JSON._save("hiscore.json", highScoreList);
