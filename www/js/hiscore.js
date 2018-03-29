@@ -12,7 +12,7 @@ $(document).ready(function ()
             });
 
             // Make VALUEs FOR TABLE HEADER.
-            let col = ['No:', 'Name', 'Score'];
+            let col = ['No:', 'Name', 'Moves'];
 
             // CREATE DYNAMIC TABLE.
             let table = document.createElement("table");
