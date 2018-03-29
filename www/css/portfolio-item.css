@@ -53,6 +53,17 @@ footer {
 
 }
 
+#main_logo {
+    display: inline-block;
+    width: 40%;
+    margin-bottom: auto;
+
+}
+#display {
+    z-index: 10000;
+
+}
+
 #main_picture1{
 	width: 100%;
 	text-align: center;
@@ -150,15 +161,15 @@ table#center {
 	max-width: 500px;
 }
 
-.rules_pictures1 
+.rules_pictures1
 {
 	width:500px;
 	border-radius: 20px;
 	padding-bottom: 10px;
 }
-.rules_pictures2 
+.rules_pictures2
 {
-	
+
     cursor: pointer;
 	width:500px;
 	border-radius: 20px;
