@@ -91,7 +91,7 @@ class Game {
 			    			$('#exampleModalLongTitle').text("YOU WON!");
 				    		$('#myModal .modal-body').html("Dear " + winner + ", you won against a bot. That's nice, but we want you to have more friends. Go outside and meet someone irl! YOLO! 😊");
 				    		$('#myModal').modal();
-			    		} else if ((winner == "Mr Robot" || winner == "Mr Data") && that.player1.type == "human"){  //unless both players are bots
+			    		} else if ((winner == "Mr Robot" || winner == "Mr Data") && (that.player1.type == "human" || that.player2.type == "human")){  //unless both players are bots
 					    	$('#exampleModalLongTitle').text("BOT WON"); 
 					    	$('#myModal .modal-body').html("I am " + winner + '<br> and I am superior to puny humans.<br> I will rule all of mankind!');
 					    	$('#myModal').modal();
