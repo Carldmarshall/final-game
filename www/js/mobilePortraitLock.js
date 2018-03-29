@@ -22,4 +22,4 @@ function isTouchDevice() {
 }
 
 window.addEventListener("orientationchange", warnOnWrongOrientation);
-warnOnWrongOrientation()
+warnOnWrongOrientation();
