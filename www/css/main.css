@@ -120,7 +120,7 @@ body {
   td 
         {
             
-            border:solid 1px #099e2c;
+            
             padding:2px 4px;
             
             margin-top: -10px;
@@ -128,7 +128,7 @@ body {
             width: 300px;
             height: 40px;
             text-align: center;
-            border-collapse: separate;
+           
             border-spacing: 10px;
             font-family: 'MyWebFont', Arial, sans-serif;
             font-size: 3vh;
@@ -144,13 +144,14 @@ body {
             background: linear-gradient(to left,#7b4397,#136569);
 
             margin:auto;
-            border:solid 2px #099e2c;
+            
             padding:2px 4px;
             margin-top: -40px;
             height: 50%;
-            border-spacing: 10px;
-            border-radius: 20px;
+            border-spacing: 20px;
+            border-radius: 10px;
             max-width: 500px;
+            border-radius: 5%;
 
         }
 
@@ -159,12 +160,8 @@ body {
             color: white;
             text-align: center;
             text-shadow: 3px 2px purple;
-            border:solid 1px #099e2c;
             
-            
-            border-collapse: separate;
             border-spacing: 10px;
-            
             font-family: 'MyWebFont', Arial, sans-serif;
             font-size: 4vh;
             font-weight: normal;
