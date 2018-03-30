@@ -124,15 +124,6 @@ table#center {
 
 
 
-/*.navbar {
-	display: inline-block;
-	position: fixed;
-	width: 100%;
-	padding: 0;
-	height: auto;
-}*/
-
-
 .button_style {
 	font-family: 'MyWebFont', Arial, sans-serif;
 	font-weight: normal;
@@ -293,24 +284,7 @@ h3, h1 {
 	color: rgb(230, 206, 68);
 	font-family: 'MyWebFont', Arial, sans-serif;
 }
-/*.cursor2 {
-  background: grey;
-  cursor: url(imgs/cursor2.png), auto;
-}
 
-/*#test-area {
-	height: 200px;
-    border: 3px dashed #CCCCCC;
-    background: #FFFFFF;
-    padding: 20px;
-}
-#test-area2 {
-	height: 200px;
-    border: 3px dashed #CCCCCC;
-    background: #FFFFFF;
-    padding: 20px;
-}
-*/
 
 h4 {
     color: Yellow;
@@ -318,4 +292,17 @@ h4 {
     font-weight:normal;
     font-style:normal;
 
+}
+
+.e {
+	color: #002B36;
+}
+
+.easter {
+	display: none;
+}
+
+.showEaster:hover .easter{
+	display: block;
+	
 }
