@@ -1,150 +1,155 @@
- <!DOCTYPE html>
-  <head>
-    <title>Race 4 Space</title>
-    <!-- Browser tab icon. =) Start-->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/imgs/favicomatic/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/imgs/favicomatic/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/imgs/favicomatic/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/imgs/favicomatic/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/imgs/favicomatic/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/imgs/favicomatic/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/imgs/favicomatic/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/imgs/favicomatic/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="/imgs/favicomatic/mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="/imgs/favicomatic/mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="/imgs/favicomatic/mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="/imgs/favicomatic/mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="/imgs/favicomatic/mstile-310x310.png" />
-     <!-- Browser tab icon. =) end-->
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/portfolio-item.css" rel="stylesheet">
-
-    <!-- Application specific CSS -->
-    <link rel="stylesheet" href="/css/main.css">
-
-    <!-- JavaScript libraries -->
-    <script src="./jsonflex.js"></script>
-    <script src="./js/libs/jquery.js"></script>
-    <script src="./js/libs/popper.js"></script>
-
-    <!-- Application specific JavaScript -->
-    <!--  <script src="./js/classes/board.class.js"></script> -->
-    <script src="./js/mobilePortraitLock.js"></script>
-    <script src="./js/classes/player.js"></script>
-    <script src="./js/classes/bot.class.js"></script>
-    <script src="./js/classes/easyBot.js"></script>
-    <script src="./js/classes/smartBot.js"></script>
-    <script src="./js/classes/board.js"></script>
-    <script src="./js/classes/game.js"></script>
-    <script src="./js/mainGame.js"></script>
-    
-    
-  </head>
-
-  <body id = "body_index">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-inline-block active">
-      <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <h6>Home</h6>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="play.html">
-                <h6>Play</h6>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="rules.html">
-                <h6>Rules</h6>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="hiscore.html">
-                <h6>Top 4</h6>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-    <!-- Page Content -->
-    <div class="container all-except-footer text-center">
-
-      <div class="vs col-md-12 col-12 order-3">
+<!DOCTYPE html> 
+  <head> 
+    <title>Race 4 Space</title> 
+    <!-- Browser tab icon. =) Start--> 
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/imgs/favicomatic/apple-touch-icon-57x57.png" /> 
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/imgs/favicomatic/apple-touch-icon-114x114.png" /> 
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/imgs/favicomatic/apple-touch-icon-72x72.png" /> 
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/imgs/favicomatic/apple-touch-icon-144x144.png" /> 
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/imgs/favicomatic/apple-touch-icon-60x60.png" /> 
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/imgs/favicomatic/apple-touch-icon-120x120.png" /> 
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/imgs/favicomatic/apple-touch-icon-76x76.png" /> 
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/imgs/favicomatic/apple-touch-icon-152x152.png" /> 
+    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-196x196.png" sizes="196x196" /> 
+    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-96x96.png" sizes="96x96" /> 
+    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-32x32.png" sizes="32x32" /> 
+    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-16x16.png" sizes="16x16" /> 
+    <link rel="icon" type="image/png" href="/imgs/favicomatic/favicon-128.png" sizes="128x128" /> 
+    <meta name="application-name" content="&nbsp;"/> 
+    <meta name="msapplication-TileColor" content="#FFFFFF" /> 
+    <meta name="msapplication-TileImage" content="/imgs/favicomatic/mstile-144x144.png" /> 
+    <meta name="msapplication-square70x70logo" content="/imgs/favicomatic/mstile-70x70.png" /> 
+    <meta name="msapplication-square150x150logo" content="/imgs/favicomatic/mstile-150x150.png" /> 
+    <meta name="msapplication-wide310x150logo" content="/imgs/favicomatic/mstile-310x150.png" /> 
+    <meta name="msapplication-square310x310logo" content="/imgs/favicomatic/mstile-310x310.png" /> 
+     <!-- Browser tab icon. =) end--> 
+ 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+ 
+    <!-- Bootstrap core CSS --> 
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+ 
+    <!-- Custom styles for this template --> 
+    <link href="css/portfolio-item.css" rel="stylesheet"> 
+ 
+    <!-- Application specific CSS --> 
+    <link rel="stylesheet" href="/css/main.css"> 
+ 
+    <!-- JavaScript libraries --> 
+    <script src="./jsonflex.js"></script> 
+    <script src="./js/libs/jquery.js"></script> 
+    <script src="./js/libs/popper.js"></script> 
+ 
+    <!-- Application specific JavaScript --> 
+    <!--  <script src="./js/classes/board.class.js"></script> --> 
+    <script src="./js/mobilePortraitLock.js"></script> 
+    <script src="./js/classes/player.js"></script> 
+    <script src="./js/classes/bot.class.js"></script> 
+    <script src="./js/classes/easyBot.js"></script> 
+    <script src="./js/classes/smartBot.js"></script> 
+    <script src="./js/classes/board.js"></script> 
+    <script src="./js/classes/game.js"></script> 
+    <script src="./js/mainGame.js"></script> 
+     
+     
+  </head> 
+ 
+  <body id = "body_index" onclick="document.getElementById('playerx').muted=!document.getElementById('playerx').muted"> 
+ 
+    <!-- Navigation --> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-inline-block active"> 
+      <div class="container"> 
+          <a class="navbar-brand" href="index.html"> 
+            <h6>Home</h6> 
+          </a> 
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span> 
+          </button> 
+          <div class="collapse navbar-collapse" id="navbarResponsive"> 
+            <ul class="navbar-nav ml-auto"> 
+              <li class="nav-item"> 
+                <a class="nav-link active" href="play.html"> 
+                <h6>Play</h6> 
+                </a> 
+              </li> 
+              <li class="nav-item"> 
+                <a class="nav-link" href="rules.html"> 
+                <h6>Rules</h6> 
+                </a> 
+              </li> 
+              <li class="nav-item"> 
+                <a class="nav-link" href="hiscore.html"> 
+                <h6>Top 4</h6> 
+                </a> 
+              </li> 
+            </ul> 
+          </div> 
+        </div> 
+      </nav> 
+ 
+    <!-- Page Content --> 
+    <div class="container all-except-footer text-center"> 
+ 
+      <div class="vs col-md-12 col-12 order-3"> 
           <img src="/imgs/pvsp.png" width="100%" text-center>
-      </div>
-
-      <div class="cursor1" id="gameboard">
-      </div>
-
-      <div class = "row">
-
-        <div  class = "col-md-4 col-6 text-center mt-3 order-1 order-md-1 p0">
-          <span id="namePlayer1" class="font-weight-bold text-uppercase"></span>
-          <p1 id = "player1Score"></p1><p1>moves</p1>
-        </div>
-
-        <div class="col-md-4 text-center mt-3 order-3 order-md-2">
-            <a class="nav-link" href="game.html"><button type="button" class="change_color btn btn-primary aktive btn-lg button_style">RESTART</button></a>
-        </div>
-
-        <div class = "col-md-4 col-6 text-center mt-3 order-2 order-md-3 p0">
-          <span id="namePlayer2" class="font-weight-bold text-uppercase"></span>
-          <p2 id = "player2Score" ></p2><p2>moves</p2>
-        </div>
-
-      </div>
-
-      <!-- Modal -->
-      <div class="modal fade modal1" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content modal1"><!-- modal1 modal2 modalx are all css-classes I created for controlling the modal -->
-            <div class="modal-header modalNoBottom">
-              <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-
-              <span class="close modalx" data-dismiss="modal" aria-label="Close" aria-hidden="true">&times; </span>
-              <!--<button type="button" class="close modalx" data-dismiss="modal" aria-label="Close">
-                Made a span instead as clicking the bootstrap button gave it a colored border-->
-
-             <!-- </button> -->
-            </div>
-            <div class="modal2">
-              <img src="imgs/pvsp.png" width="100%"><!-- modal image can be changed for another -->
-            </div>
-
-            <div class="modal-body modal2">
-               ...
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  </body>
-</html>
+          <span id="player"></span>
+      </div> 
+ 
+      <div class="cursor1" id="gameboard"> 
+      </div> 
+ 
+      <div class = "row"> 
+ 
+        <div  class = "col-md-4 col-6 text-center mt-3 order-1 order-md-1 p0"> 
+          <span id="namePlayer1" class="font-weight-bold text-uppercase"></span> 
+          <p1 id = "player1Score"></p1><p1>moves</p1> 
+        </div> 
+ 
+        <div class="col-md-4 text-center mt-3 order-3 order-md-2"> 
+            <a class="nav-link" href="game.html"><button type="button" class="change_color btn btn-primary aktive btn-lg button_style">RESTART</button></a> 
+        </div> 
+ 
+        <div class = "col-md-4 col-6 text-center mt-3 order-2 order-md-3 p0"> 
+          <span id="namePlayer2" class="font-weight-bold text-uppercase"></span> 
+          <p2 id = "player2Score" ></p2><p2>moves</p2> 
+        </div> 
+ 
+      </div> 
+ 
+      <!-- Modal --> 
+      <div class="modal fade modal1" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true"> 
+        <div class="modal-dialog modal-dialog-centered" role="document"> 
+          <div class="modal-content modal1"><!-- modal1 modal2 modalx are all css-classes I created for controlling the modal --> 
+            <div class="modal-header modalNoBottom"> 
+              <h5 class="modal-title" id="LongTitle"></h5> 
+              
+              <span class="close modalx" data-dismiss="modal" aria-label="Close" aria-hidden="true" 
+              >&times;
+              
+              </span> 
+              <!--<button type="button" class="close modalx" data-dismiss="modal" aria-label="Close"> 
+                Made a span instead as clicking the bootstrap button gave it a colored border--> 
+ 
+             <!-- </button> --> 
+            </div> 
+            <div class="modal2"> 
+              <img src="imgs/pvsp.png" width="100%"><!-- modal image can be changed for another --> 
+            </div> 
+ 
+            <div class="modal-body modal2"> 
+               ... 
+            </div> 
+ 
+          </div> 
+        </div> 
+      </div> 
+ 
+    </div> 
+    <!-- Bootstrap core JavaScript --> 
+    <script src="vendor/jquery/jquery.min.js"></script> 
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+ 
+  </body> 
++
+</html> 

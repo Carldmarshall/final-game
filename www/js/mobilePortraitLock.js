@@ -5,7 +5,9 @@ function warnOnWrongOrientation(){
   setTimeout(function(){
     let orientation = window.innerWidth < window.innerHeight ? 'portrait' : 'landscape'
     if(orientation === 'landscape' && isPhone()){
-       alert('To start, rotate your screen to portrait.');
+       $('#LongTitle').text("race4space"); 
+                $('#myModal .modal-body').html(" To play we recomend that you <br> rotate your screen to portrait.👍");
+                $('#myModal').modal();
     }
   }, 10);
 }
