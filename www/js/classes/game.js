@@ -85,37 +85,38 @@ class Game {
 					    	highScoreList = highScoreList.slice(0, 4);
 
 					    	JSON._save("hiscore.json", highScoreList);
-					    } // Here comes a modal instead of an alert, see modal section in game.html
+					    } 
+					    // functions that puts an audiotag with the sound in the document when the modal is shown
+					    // and that stops the sound when it the modal hides.
+					    //The reason why is that you can close the modal two ways: by clicking the x and by clicking outside the modal.
+					  		$('#myModal').on('shown.bs.modal', function () {
+  								$('#player').html('<audio autoplay loop="" id="playerx" src="/mp3/race4space.mp3"></audio>')	
+							})
+							$('#myModal').on('hide.bs.modal', function () {
+  								$('#player').html('<audio stop loop="" id="playerx" src="/mp3/race4space.mp3"></audio>')	
+							})
+					    // Here comes a modal instead of an alert, see modal section in game.html
 					    //if (that.player1.type == "human" && that.player2.type == "bot"){ // if you play against a bot and win display this message
 			    		if (winner != "Mr Robot" && winner != "Mr Data" && that.player2.type == "bot"){	
 			    			$('#LongTitle').text("YOU WON!");
 				    		$('#myModal .modal-body').html("Dear " + winner + ", you won against a bot. That's nice, but we want you to have more friends. Go outside and meet someone irl! YOLO! 😊");
 				    		$('#myModal').modal();
-				    		$('#myModal').on('shown.bs.modal', function () {
-  								$('#player').html('<audio autoplay loop="" id="playerx" src="/mp3/race4space.mp3"></audio>')
-							})
-			    		} else if ((winner == "Mr Robot" || winner == "Mr Data") && (that.player1.type == "human" || that.player2.type == "human")){  //unless both players are bots
+				    		//unless you lose against a bot, than this message
+			    		} else if ((winner == "Mr Robot" || winner == "Mr Data") && (that.player1.type == "human" || that.player2.type == "human")){  
 					    	$('#LongTitle').text("BOT WON"); 
 					    	$('#myModal .modal-body').html("I am " + winner + '<br> and I am superior to puny humans.<br> I will rule all of mankind!');
 					    	$('#myModal').modal();
-					    	$('#myModal').on('shown.bs.modal', function () {
-  								$('#player').html('<audio autoplay loop="" id="playerx" src="/mp3/race4space.mp3"></audio>')
-							})
-
-			    		} else if (that.player1.type == "bot" && that.player2.type == "bot"){  //unless both players are bots
+					    	 //unless both players are bots
+			    		} else if (that.player1.type == "bot" && that.player2.type == "bot"){ 
 					    	$('#LongTitle').text("BOT WARS"); 
 					    	$('#myModal .modal-body').html(winner + ' has won,<br> and will rule over all other bots!');
 					    	$('#myModal').modal();
-					    	$('#myModal').on('shown.bs.modal', function () {
-  								$('#player').html('<audio autoplay loop="" id="playerx" src="/mp3/race4space.mp3"></audio>')
-							})
-					    } else {				// otherwise display this message. Another modal instead of an alert, see modal in game.html
+					    	
+					    } else {	// otherwise display this message, see modal in game.html
 					    	$('#LongTitle').text("\xa0\xa0WINNER\xa0"); 
 					    	$('#myModal .modal-body').html(winner + " has won! <br>You are the smartest human in the game.👍");
 					    	$('#myModal').modal();
-							$('#myModal').on('shown.bs.modal', function () {
-  								$('#player').html('<audio autoplay loop="" id="playerx" src="/mp3/race4space.mp3"></audio>')
-							})
+
 							
 					    }	
 					    	
